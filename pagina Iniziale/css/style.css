@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(206, 206, 206);
+}
+
+main{
+    margin: 0 8%;
+}
+
+header{
+    background-color: rgb(48, 47, 47);
+}
+
+header > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    color: white;
+    margin-left: 10px;
+}
+
+nav{
+    display: inline-block;
+}
+
+nav > ul >li{
+    display: inline-block;
+}
+
+nav > ul >li > a{
+    text-decoration: none;
+    color: white;
+    margin: 0 2px;
+    border: solid 1px white;
+    border-radius:30%;
+    padding:5px;
+}
+
+header > form{
+    float:right;
+    margin-right: 20px;
+    margin-top: 25px;
+    width: 25%;
+}
+
+main > article{
+    margin-top: 20px;
+    background-color: white;
+}
+
+main > article >section > div > img{
+    width:100px;
+}
+
+main > article >section > div{
+    display: inline-block;
+}
+
+main > article >section > h2{
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: top;
+}
+
+main > article >section > p{
+    vertical-align: top;
+    padding-top:5px;
+    padding-left:10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+

@@ -1,0 +1,42 @@
+h1[name=mainTitle]{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(255, 255, 255);
+    text-align: center;
+    padding: 5px 0px;
+}
+
+body > header{
+    background-color: rgb(103, 124, 182);
+}
+
+h2[name=subTitle]{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section[name=mainSection]{
+    text-align: center;
+    background-color: rgb(233, 231, 225);
+    border: solid 1px rgb(202, 202, 200);
+    border-radius: 20px;
+    margin: 0 30%;
+}
+
+label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+input[type=submit], input[type=reset]{
+    margin: 10px 0px 10px 0px;
+    
+}
+
+aside{
+    text-align: center;
+    margin-top: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+aside > p{
+    margin : 0;
+}

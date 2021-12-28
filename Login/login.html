@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+        <script src="login.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1 name="mainTitle">Login</h1>
+        </header>
+
+        <main>
+            <section name="mainSection">
+                <h2 name="subTitle">Insert the following information: </h2>
+                
+                <form action="submit.php" method="POST">
+                    <label id="demo">
+                        Insert your Username: 
+                        <input type="text" name="username"/>
+                    </label>
+                    <br/>
+                    <label id="demo">
+                        Insert your Password: 
+                        <input type="password" name="password"/>
+                    </label>
+                    <br/>
+                    <input type="submit" value="Submit" name="loginButton"/>
+                    <input type="reset" value="Reset" name="resetButton"/>
+                </form>
+            </section>
+        </main>
+
+        <aside>
+            
+        </aside>
+    </body>
+
+</html>
