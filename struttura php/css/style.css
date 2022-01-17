@@ -1,0 +1,172 @@
+/*Comments*/
+
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color:  rgb(34, 37, 36);
+}
+
+header{
+    background-color: rgb(56, 58, 57);
+    font-size: small;
+}
+
+nav{
+    display:inline-block;
+    margin-bottom: 20px;
+    
+}
+
+h1[name=title]{
+    display: inline-block;
+    color: white;
+    margin: 20px 20px 20px 50px;
+}
+
+nav > ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 25px;
+}
+
+a[name=header]{
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: white;
+    text-decoration: none;
+    color:black;
+}
+
+section[name=mainSection]{
+    text-align: center;
+}
+
+main > section > p[name=mainText]{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(56, 58, 57);
+    color:rgb(189, 188, 188);
+    margin: 20px 10% 0 10%;
+    padding: 10px;
+}
+
+
+h2[name=subTitle]{
+    color: white;
+}
+
+label.login{
+    font-style: italic;
+    color:white
+}
+
+p[name=info]{
+    color:white;
+    font-size: medium;
+}
+
+a[name=registration]{
+    text-decoration:none;
+    color: rgb(41, 116, 230);
+    text-decoration: underline;
+}
+
+input[type=submit] , input[type=reset]{
+    margin-top: 5px;
+}
+
+label.registration{
+    color:white;
+}
+
+p.failure{
+    color:red;
+}
+
+p[name=registrationError]{
+    color:red;
+}
+
+footer[name="cookie"]{
+    text-align: center;
+    border: solid 1px #00c9c9;
+    color: #272525;
+    background-color: #7a7878;
+    margin: 2% 10%;
+}
+
+footer > form {
+    padding: 10px;
+
+}
+
+footer > form > label > input {
+    border: solid 1px gray;
+    background-color: aqua;
+    margin-left: 5px;
+    text-decoration: none;
+    padding: 3px;
+    border-radius: 20px;
+}
+
+section > form{
+    text-align: center;
+}
+
+section > article {
+    margin: 10px 8% 0 8%;
+    text-align: left;
+    background-color: gray;
+}
+
+section > article > img {
+    float: left;
+    width: 100px;
+    height: 50px;
+    margin: 10px 0 0 2%;
+}
+
+section > article > h2{
+    margin-left: 20px;
+    display: inline-block;
+    color:#272525;
+}
+
+section > form{
+    margin-bottom: 2%;
+}
+
+section > article > footer{
+    text-align: center;
+}
+
+section > article > footer > p{
+    display: none;
+    color:#3f3f3f;
+}
+
+p#failure{
+    color:red;
+    display: inline-block;
+}
+
+article > div{
+    text-align: right;
+}
+
+article > div > a[name=cart]{
+    color: rgb(41, 247, 178);
+    text-decoration: none;
+    border: solid 1px rgb(41, 247, 178);
+    margin-right: 2%;
+    padding: 5px;
+    background-color: #1a01759a;
+}
+
