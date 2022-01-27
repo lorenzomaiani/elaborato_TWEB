@@ -1,49 +1,51 @@
-body{
-    background-color: rgb(206, 206, 206);
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.search{
+    border: 2px pink;
+    width: 80%;
+    height: 40px;
+    border-radius: 60px;
+    margin-right: -35px;
+    outline: none;
+}
+.btn0{
+    background: pink;
+    border: black;
+    border-radius: 60px;
+    width:40%;
+    font-style: italic;
+}
+.navbar-brand{
+    font-size: 2rem;
+    color:lightblue;
+    margin-left: 2%;
+    font-family: 'Brush Script MT', cursive;
+}
+.main{
+    background: url(./bgprove/prova.jpg);
+    background-color: pink;
+    background-size: cover;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 50vh;
+    border:black;
+    border: 2px;
+    background-repeat: no-repeat;    
+}
+.main h1{
+    color: black;
+    font-size: 4rem;
+    font: 'Brush Script MT',cursive;
 }
 
-main{
-    margin: 0 8%;
-}
-
-header{
-    background-color: rgb(48, 47, 47);
-}
-
-header > h1{
-    font-family: Arial, Helvetica, sans-serif;
-    display: inline-block;
-    color: white;
-    margin-left: 10px;
-}
-
-nav{
-    display: inline-block;
-}
-
-nav > ul >li{
-    display: inline-block;
-}
-
-nav > ul >li > a{
-    text-decoration: none;
-    color: white;
-    margin: 0 2px;
-    border: solid 1px white;
-    border-radius:30%;
-    padding:5px;
-}
-
-header > form{
-    float:right;
-    margin-right: 20px;
-    margin-top: 25px;
-    width: 25%;
-}
 
 main > article{
     margin-top: 20px;
-    background-color: white;
+    background-color: red;
 }
 
 main > article >section > div > img{
