@@ -1,0 +1,284 @@
+/*Comments*/
+
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: rgb(162, 163, 163);
+}
+
+header{
+    background-color: rgb(56, 58, 57);
+    font-size: small;
+}
+
+nav{
+    display:inline-block;
+    margin-bottom: 20px;
+    
+}
+
+h1[name=title]{
+    display: inline-block;
+    color: white;
+    margin: 20px 20px 20px 20px;
+}
+
+nav > ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 25px;
+}
+
+a[name=header]{
+    padding: 10px;
+    border: 2px solid rgb(145, 145, 145);
+    background-color: white;
+    text-decoration: none;
+    color:black;
+}
+
+a:hover{
+    color:#7a7878;
+}
+
+section[name=mainSection]{
+    text-align: center;
+}
+
+main > section > p[name=mainText]{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(196, 197, 197);
+    color:rgb(56, 58, 57);
+    margin: 20px 10% 0 10%;
+    padding: 10px;
+}
+
+
+h2[name=subTitle]{
+    color: rgb(56, 58, 57);
+}
+
+label.login{
+    font-style: italic;
+    color:rgb(56, 58, 57);
+}
+
+p[name=info]{
+    color:rgb(56, 58, 57);
+    font-size: medium;
+}
+
+a[name=registration]{
+    text-decoration:none;
+    color: rgb(41, 116, 230);
+    text-decoration: underline;
+}
+
+input{
+    background-color:white;
+}
+
+input[type=submit] , input[type=reset]{
+    margin-top: 5px;
+}
+
+label.registration{
+    color:rgb(56, 58, 57);
+}
+
+p.failure{
+    color:red;
+}
+
+p[name=registrationError]{
+    color:red;
+}
+
+footer[name="cookie"]{
+    text-align: center;
+    border: solid 1px #00c9c9;
+    color: white;
+    background-color: rgb(56, 58, 57);
+    margin: 2% 10%;
+}
+
+footer > form {
+    padding: 10px;
+}
+
+footer > form > label > input {
+    border: solid 1px gray;
+    background-color: aqua;
+    margin-left: 5px;
+    text-decoration: none;
+    padding: 3px;
+    border-radius: 20px;
+}
+
+section > form{
+    margin-bottom: 1%;
+    margin-top:2%;
+}
+
+section > article {
+    margin: 10px 8% 0 8%;
+    text-align: left;
+    background-color: rgb(196, 197, 197);
+}
+
+section > article > img {
+    float: left;
+    width: 100px;
+    height: 50px;
+    margin: 10px 0 0 2%;
+}
+
+section > article > h2{
+    margin-left: 20px;
+    display: inline-block;
+    color:#272525;
+}
+
+section > article > footer{
+    text-align: center;
+}
+
+section > article > footer > p{
+    display: none;
+    color:#3f3f3f;
+}
+
+p#failure{
+    color:red;
+    display: inline-block;
+}
+
+article > div{
+    text-align: right;
+    margin-bottom: 5%;
+}
+
+article > div > a[name=cart]{
+    color: rgb(41, 247, 178);
+    text-decoration: none;
+    border: solid 1px rgb(41, 247, 178);
+    margin-right: 2%;
+    padding: 10px;
+    background-color: #1a01759a;
+}
+
+article > div > p{
+    display:inline-block;
+    padding-right: 2%;
+    color:#272525;
+}
+
+a[name=option]{
+    text-decoration: none;
+    color:black;
+    margin: 10px 2%;
+    padding:10px;
+    border: solid 1px white;
+    background-color: grey;
+    display: block;
+}
+
+a[name=buy]{
+    text-decoration: none;
+    color:aqua;
+    margin: 10px 30%;
+    padding:10px;
+    border: solid 1px white;
+    background-color: rgb(56, 58, 57);
+    display: block;
+}
+
+form > ul > li{
+    list-style: none;
+}
+
+form > ul > li > label{
+    color:rgb(56, 58, 57);
+    display:inline-block;
+    margin-top: 20px;
+}
+
+input[name=productname],input[name=productimage]{
+    display:block;
+    width:100%;
+}
+
+textarea[name=productdescription]{
+    display: block;
+    width:100%;
+    margin-top:5px;
+}
+
+a[name=exitButton]{
+    color:white;
+    text-decoration: none;
+    border: solid 1px white;
+    border-radius: 10%;
+    padding: 8px;
+}
+
+input[value=Insert], input[value=Remove]{
+    margin-bottom:10px;
+}
+
+form > ul{
+    padding-left:0;
+}
+
+input[name=cvv]{
+    width:30px;
+}
+
+table{
+    margin-left: 40%;
+    width:20%;
+}
+
+td{
+    padding: 8px;
+    border:solid 1px rgb(56, 58, 57);;
+    color:black;
+}
+
+
+
+
+
+@media screen and (min-width:768px){
+    a[name=option]{
+        display: inline-block;
+    }
+
+    input[value=Insert], input[value=Remove]{
+        margin-bottom:0;
+    }
+
+    input{
+        color:black !important;
+    }
+
+    article > div{
+        text-align:right;
+        margin-bottom:0;
+    }
+
+    a[name=buy]{
+        margin: 10px 45%;
+    }
+
+    li.card{
+        display:inline;
+    }
+}
