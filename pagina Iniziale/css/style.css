@@ -11,9 +11,13 @@
     margin-right: -35px;
     outline: none;
 }
+.badge{
+   color: white;
+   background-color:indianred;
+}
 .btn0{
-    background: pink;
-    border: black;
+    background: lightskyblue;
+    border-color: black;
     border-radius: 60px;
     width:40%;
     font-style: italic;
@@ -26,7 +30,6 @@
 }
 .main{
     background: url(./bgprove/prova.jpg);
-    background-color: pink;
     background-size: cover;
     width: 98%;
     margin-left: 1%;
@@ -42,6 +45,21 @@
     font: 'Brush Script MT',cursive;
 }
 
+.shop{
+    margin-top:1%;
+    margin-bottom: 1%;
+    margin-right:1%;
+    border:2px black;
+    
+}
+.card{
+    margin-top:10px;
+    
+}
+.card-body{
+    border:2px;
+    border-color: black;
+}
 
 main > article{
     margin-top: 20px;
