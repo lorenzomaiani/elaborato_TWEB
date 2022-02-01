@@ -106,10 +106,10 @@
             $stmt->execute();
         }
 
-        public function insertNewProduct($productname, $productdescription, $productimage){
-            $query = "INSERT into products (productname, productlabel, productimage) VALUES (?, ?, ?)";
+        public function insertNewProduct($productname, $productdescription, $productimage, $productprice, $productquantity){
+            $query = "INSERT into products (productname, productlabel, productimage, price, quantity) VALUES (?, ?, ?,?,?)";
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param("sss", $productname, $productdescription, $productimage);
+            $stmt->bind_param("sssss", $productname, $productdescription, $productimage,$productprice, $productquantity);
             $stmt->execute();
         }
     }

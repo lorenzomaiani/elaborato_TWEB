@@ -17,7 +17,6 @@
     
 
     <a href="productManager.php?action=1" name="option">Insert new product</a>
-    <a href="productManager.php?action=2" name="option">Remove a product</a>
     <a href="productManager.php?action=3" name="option">Show all product</a>
 
     
@@ -28,7 +27,9 @@
             <article>
                 <img src="img/<?php echo $product["productimage"]?>" alt="article_image">
                 <h2><?php echo $product["productname"]?></h2>
-                <p name="longDesc"><?php echo $product["productlabel"]?></p>
+                <div name="div">
+                    <a href="productManager.php?action=2&productname=<?php echo $product["productname"]?>" name="removeProduct">Remove Product</a>
+                </div>
             </article>
         <?php endforeach;?>
     <?php endif;?>

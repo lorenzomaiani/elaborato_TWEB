@@ -8,13 +8,13 @@
     <form action="#" method="POST">
         <label for="" class="login">
             Username: 
-            <input type="text" id="username" name="username" placeholder="Insert here your username"/>
+            <input type="text" id="username" name="username" placeholder="Insert here your username" required/>
         </label>
         <br/>
 
         <label for="" class="login"> 
             Password: 
-            <input type="password" id="passwd" name="passwd" minlength="4" placeholder="Insert here your password"/>
+            <input type="password" id="passwd" name="passwd" minlength="4" placeholder="Insert here your password" required/>
         </label>
         <br/>
         

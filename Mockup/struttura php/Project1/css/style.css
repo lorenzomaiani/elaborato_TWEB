@@ -190,6 +190,19 @@ a[name=option]{
     display: block;
 }
 
+div[name=div]{
+    text-align: center;
+}
+
+div > a[name="removeProduct"]{
+    text-decoration: none;
+    border: solid 2px tomato;
+    background-color:lightcoral;
+    margin-bottom: 10px;
+    margin-top:20px;
+    color:black;
+}
+
 a[name=buy]{
     text-decoration: none;
     color:aqua;
@@ -219,12 +232,14 @@ textarea[name=productdescription]{
     display: block;
     width:100%;
     margin-top:5px;
+    background-color:white;
 }
 
 a[name=exitButton]{
     color:white;
+    background-color: rgb(56, 58, 57);
     text-decoration: none;
-    border: solid 1px white;
+    border: solid 1px rgb(56, 58, 57);
     border-radius: 10%;
     padding: 8px;
 }
@@ -237,21 +252,14 @@ form > ul{
     padding-left:0;
 }
 
-input[name=cvv]{
+input[name=cvv], input[name=productprice], input[type=range]{
     width:30px;
 }
 
+
 table{
-    margin-left: 40%;
-    width:20%;
+    display:none;
 }
-
-td{
-    padding: 8px;
-    border:solid 1px rgb(56, 58, 57);;
-    color:black;
-}
-
 
 
 
@@ -280,5 +288,16 @@ td{
 
     li.card{
         display:inline;
+    }
+
+    table{
+        margin-left: 40%;
+        width:20%;
+    }
+    
+    td{
+        padding: 8px;
+        border:solid 1px rgb(56, 58, 57);;
+        color:black;
     }
 }
