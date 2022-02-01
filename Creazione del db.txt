@@ -1,0 +1,18 @@
+CREATE TABLE users(
+	username VARCHAR(30),
+	password VARCHAR(30)
+)
+
+CREATE TABLE prodotti (
+    idprodotto INT AUTO_INCREMENT PRIMARY KEY,
+    nomeprodotto VARCHAR(30),
+    descrizioneprodotto VARCHAR(100),
+    quantitàprodotto INT,
+    immagineprodotto VARCHAR(30),
+    prezzoprodotto INT
+)
+
+CREATE TABLE carrello (
+	username VARCHAR(30),
+	nomeprodotto VARCHAR(30)
+)
