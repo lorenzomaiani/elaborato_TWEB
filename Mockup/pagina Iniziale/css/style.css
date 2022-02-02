@@ -28,6 +28,10 @@
     margin-left: 2%;
     font-family: 'Brush Script MT', cursive;
 }
+body{
+    background: url(./bgprove/prova.jpg);
+    background-size: cover;
+}
 .main{
     background: url(./bgprove/prova.jpg);
     background-size: cover;
@@ -45,7 +49,7 @@
     font: 'Brush Script MT',cursive;
 }
 
-.shop{
+.shop .cart{
     margin-top:1%;
     margin-bottom: 1%;
     margin-right:1%;
@@ -60,31 +64,13 @@
     border:2px;
     border-color: black;
 }
+h1[name=Carrellotitle]{
+    color: white;
 
-main > article{
-    margin-top: 20px;
-    background-color: red;
 }
-
-main > article >section > div > img{
-    width:100px;
-}
-
-main > article >section > div{
-    display: inline-block;
-}
-
-main > article >section > h2{
-    display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    vertical-align: top;
-}
-
-main > article >section > p{
-    vertical-align: top;
-    padding-top:5px;
-    padding-left:10px;
-    font-family: Arial, Helvetica, sans-serif;
+section[name=checkoutbtn]{
+    margin-top:20px;
+    margin-bottom: 20px;
 }
 
 
