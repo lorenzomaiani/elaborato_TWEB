@@ -6,7 +6,7 @@
                 <form action="index.php" method="POST">
                     <label id="demo">
                         Insert your Username: 
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="username">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="username"/>
                         <label for="floatingInput"></label>
                     </label>
                     <br/>

@@ -18,15 +18,9 @@
 
     else if(isUserLoggedIn()){
         $params["content"] = "template/homepage.php";   #pagina principale utente
-        $params["script"] = "yes";
         $params["title"] = "Homepage - ".$_SESSION["username"];
-        $params["mainTitle"] = "Homepage";
         $params["user"] = $_SESSION["username"];
         $params["product"] = $db->getSomeProduct(4);
-        $params["showShop"] = "yes";
-        $params["showsubtitle"] = "yes";
-        $params["timeString"] = getTime();
-
     }
     
     else{
