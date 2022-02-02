@@ -38,7 +38,7 @@
         }
         
         public function getSomeProduct($n){
-            $query = "SELECT productname, productlabel, productimage,price,quantity FROM products LIMIT ?";
+            $query = "SELECT nomeprodotto, descrizioneprodotto, immagineprodotto,quantitàprodotto, prezzoprodotto FROM prodotti LIMIT ?";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("i", $n);
             $stmt->execute();
@@ -48,7 +48,7 @@
         }
 
         public function getProductByName($productName){
-            $query = "SELECT productname, productlabel, productimage FROM products WHERE productname = ?";
+            $query = "SELECT nomeprodotto, descrizioneprodotto, immagineprodotto,quantitàprodotto,prezzoprodotto FROM prodotti WHERE nomeprodotto = ?";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("s", $productName);
             $stmt->execute();
@@ -58,7 +58,7 @@
         }
 
         public function getAllProduct(){
-            $query = "SELECT * FROM products";
+            $query = "SELECT * FROM prodotti";
             $stmt = $this->db->prepare($query);
             $stmt->execute();
             $result = $stmt->get_result();
@@ -67,7 +67,7 @@
         }
 
         public function getProductFromCartByUsername($username){
-            $query = "SELECT productname, productlabel, productimage, price FROM products WHERE productname IN (SELECT productname FROM cart WHERE username = ?)";
+            $query = "SELECT nomeprodotto, descrizioneprodotto, immagineprodotto, prezzo, quantità FROM prodotti WHERE nomeprodotto IN (SELECT nomeprodotto FROM carrello WHERE username = ?)";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("s", $username);
             $stmt->execute();
@@ -76,31 +76,31 @@
             return $result->fetch_all(MYSQLI_ASSOC);
         }
 
-        public function addProductToCart($username,$productname){
-            $query = "INSERT into cart (username, productname) VALUES (?, ?)";
+        public function addProductToCart($username,$nomeprodotto){
+            $query = "INSERT into cart (username, nomeprodotto) VALUES (?, ?)";
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param("ss", $username, $productname);
+            $stmt->bind_param("ss", $username, $nomeprodotto);
             $stmt->execute();
         }
 
-        public function removeProductToCart($username,$productname){
-            $query = "DELETE FROM cart WHERE username = ? AND productname = ?";
+        public function removeProductToCart($username,$nomeprodotto){
+            $query = "DELETE FROM cart WHERE username = ? AND nomeprodotto = ?";
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param("ss", $username, $productname);
+            $stmt->bind_param("ss", $username, $nomeprodotto);
             $stmt->execute();
         }
 
-        public function removeProductByName($productname){
+        public function removeProductByName($nomeprodotto){
             $query = "DELETE FROM products WHERE productname = ?";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("s", $productname);
             $stmt->execute();
         }
 
-        public function insertNewProduct($productname, $productdescription, $productimage){
-            $query = "INSERT into products (productname, productlabel, productimage) VALUES (?, ?, ?)";
+        public function insertNewProduct($nomeprodotto, $descrizioneprodotto, $immagineprodotto, $quantitàprodotto, $prezzoprodotto){
+            $query = "INSERT into prodotti (nomeprodotto, descrizioneprodotto, immagineprodotto, quantitàprodotto, prezzoprodotto) VALUES (?, ?, ?, ?, ?)";
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param("sss", $productname, $productdescription, $productimage);
+            $stmt->bind_param("sssii", $nomeprodotto, $descrizioneprodotto, $immagineprodotto, $quantitàprodotto,$prezzoprodotto );
             $stmt->execute();
         }
     }
