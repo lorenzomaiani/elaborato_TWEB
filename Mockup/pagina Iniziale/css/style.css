@@ -68,9 +68,44 @@ h1[name=Carrellotitle]{
     color: white;
 
 }
+h1[name=mainTitle]{
+    font-size: 2rem;
+    color:lightblue;
+    margin-left: 2%;
+    font-family: 'Brush Script MT', cursive;
+}
+h1[name=loginTitle]{
+    color: white;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section[name=mainSection]{
+    text-align: center;
+    background-color: rgb(230, 193, 230);
+    border-radius: 20px;
+    margin: 0 30%;
+}
+
+label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+input[type=submit], input[type=reset]{
+    margin: 10px 0px 10px 0px;
+    
+}
 section[name=checkoutbtn]{
     margin-top:20px;
     margin-bottom: 20px;
 }
 
+aside{
+    text-align: center;
+    margin-top: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 
+aside > p{
+    margin : 0;
+}
