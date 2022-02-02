@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.search{
+    border: 2px pink;
+    width: 80%;
+    height: 40px;
+    border-radius: 60px;
+    margin-right: -35px;
+    outline: none;
+}
+.badge{
+   color: white;
+   background-color:indianred;
+}
+.btn0{
+    background: lightskyblue;
+    border-color: black;
+    border-radius: 60px;
+    width:40%;
+    font-style: italic;
+}
+.navbar-brand{
+    font-size: 2rem;
+    color:lightblue;
+    margin-left: 2%;
+    font-family: 'Brush Script MT', cursive;
+}
+body{
+    background: url(./bgprove/prova.jpg);
+    background-size: cover;
+}
+.main{
+    background: url(./bgprove/prova.jpg);
+    background-size: cover;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 50vh;
+    border:black;
+    border: 2px;
+    background-repeat: no-repeat;    
+}
+.main h1{
+    color: black;
+    font-size: 4rem;
+    font: 'Brush Script MT',cursive;
+}
+
+.shop .cart{
+    margin-top:1%;
+    margin-bottom: 1%;
+    margin-right:1%;
+    border:2px black;
+    
+}
+.card{
+    margin-top:10px;
+    
+}
+.card-body{
+    border:2px;
+    border-color: black;
+}
+h1[name=Carrellotitle]{
+    color: white;
+
+}
+h1[name=mainTitle]{
+    font-size: 2rem;
+    color:lightblue;
+    margin-left: 2%;
+    font-family: 'Brush Script MT', cursive;
+}
+h1[name=loginTitle]{
+    color: white;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section[name=mainSection]{
+    text-align: center;
+    background-color: rgb(230, 193, 230);
+    border-radius: 20px;
+    margin: 0 30%;
+}
+
+label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+input[type=submit], input[type=reset]{
+    margin: 10px 0px 10px 0px;
+    
+}
+section[name=checkoutbtn]{
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+aside{
+    text-align: center;
+    margin-top: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+aside > p{
+    margin : 0;
+}

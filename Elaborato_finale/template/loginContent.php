@@ -1,18 +1,17 @@
 
-<div class="container bg-gradient">
-            <section class=" border border-info  bg-opacity-10" name="mainSection">
+<section class=" border border-info  bg-opacity-10" name="mainSection">
                 <h2 name="subTitle">Insert the following information: </h2>
                 
                 <form action="index.php" method="POST">
                     <label id="demo">
                         Insert your Username: 
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="username">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="username"/>
                         <label for="floatingInput"></label>
                     </label>
                     <br/>
                     <label id="demo">
                         Insert your Password: 
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password"/>
                         <label for="floatingPassword"></label>
                     </label>
                     <br/>
@@ -20,7 +19,10 @@
                     <input class="btn0" type="reset" value="Reset" name="resetButton"/>
                 </form>
             </section>
-      </div>
+        </main>
+      
+      <p class="text-center" name="info">Don't have an account? <a href="registration.php" name="registration">Register</a></p>
+    </div>
 <aside></aside>
         <div class="container" style="height: 100%;">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -63,4 +65,3 @@
           </div>
         </div>
         <aside> </aside>
-        

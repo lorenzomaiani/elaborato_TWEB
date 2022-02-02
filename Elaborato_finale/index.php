@@ -18,18 +18,14 @@
 
     else if(isUserLoggedIn()){
         $params["content"] = "template/homepageUser.php";   #pagina principale utente
-        $params["script"] = "yes";
         $params["title"] = "Homepage - ".$_SESSION["username"];
-        $params["mainTitle"] = "Homepage";
         $params["user"] = $_SESSION["username"];
         $params["product"] = $db->getSomeProduct(4);
-        $params["showShop"] = "yes";
-        $params["showsubtitle"] = "yes";
-        $params["timeString"] = getTime();
-
+        $params["navHomepage"] = "yes";
     }
     
     else{
+        $params["navLogin"] = "yes";
         $params["content"] = "template/loginContent.php";  #form per il login base
         $params["title"] = "Login";
     }
