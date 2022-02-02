@@ -2,6 +2,13 @@
     class DataBase{
         private $db;
 
+        public function __construct($servername, $username, $password, $dbname, $port){
+            $this->db = new mysqli($servername,$username,$password,$dbname,$port);
+            if (!$this->db) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+        }
+
         public function selectAll(){
             $query = "SELECT * FROM users";
             $stmt = $db->prepare($query);
@@ -11,7 +18,7 @@
         }
 
         public function checkLogin($username,$password){
-            $query = "SELECT id, username FROM users WHERE username = ? AND password = ?";
+            $query = "SELECT username FROM users WHERE username = ? AND password = ?";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("ss", $username, $password);
             $stmt->execute();

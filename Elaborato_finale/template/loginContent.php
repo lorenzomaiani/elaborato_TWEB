@@ -6,7 +6,7 @@
                 <form action="index.php" method="POST">
                     <label id="demo">
                         Insert your Username: 
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="username"/>
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="username">
                         <label for="floatingInput"></label>
                     </label>
                     <br/>
@@ -63,24 +63,4 @@
           </div>
         </div>
         <aside> </aside>
-        <footer>
-          <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-              <a href="" class="navbar-brand ">Pagina del negozio</a>
-              <div class="container">
-                  <div class="collapse navbar-collapse" id="navmenu">
-                      <ul class="navbar-nav ms-auto">
-                          <li class="nav-item"><a href="#" class="nav-link">contatti</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">INFO</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">cose</a></li>
-                      </ul>
-                 
-                  
-                       </div>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              
-              
-      </div>
-      </nav>
-  </footer>
+        

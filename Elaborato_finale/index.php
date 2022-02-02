@@ -9,7 +9,7 @@
     }
 
     if(isUserLoggedIn() && $_SESSION["username"] == "Admin"){
-        $params["content"] = "";   #pagina principale admin
+        $params["content"] = "adminLogin.php";   #pagina principale admin
         $params["title"] = "Admin";
         $params["mainTitle"] = "Admin";
         $params["user"] = "Admin";
@@ -17,10 +17,16 @@
     }
 
     else if(isUserLoggedIn()){
-        $params["content"] = "template/homepage.php";   #pagina principale utente
+        $params["content"] = "template/homepageUser.php";   #pagina principale utente
+        $params["script"] = "yes";
         $params["title"] = "Homepage - ".$_SESSION["username"];
+        $params["mainTitle"] = "Homepage";
         $params["user"] = $_SESSION["username"];
         $params["product"] = $db->getSomeProduct(4);
+        $params["showShop"] = "yes";
+        $params["showsubtitle"] = "yes";
+        $params["timeString"] = getTime();
+
     }
     
     else{

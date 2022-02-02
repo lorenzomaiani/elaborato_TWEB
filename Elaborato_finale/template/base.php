@@ -16,15 +16,36 @@
       <?php ?>
       <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <a href="" class="navbar-brand ">Pagina del negozio</a>
-        <div class="col-md-3 offset-md-4">
-          <h1 class="my-auto" name="loginTitle">Login</h1>
-      </div>
-
+          <div class="col-md-3 offset-md-4">
+            <h1 class="my-auto" name="loginTitle">Login</h1>
+          </div>
       </nav>
 
       <main>
         <?php require($params["content"]);?>
       </main>
 
+
+        <footer>
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <a href="" class="navbar-brand ">Pagina del negozio</a>
+                  <div class="container">
+                      <div class="collapse navbar-collapse" id="navmenu">
+                          <ul class="navbar-nav ms-auto">
+                              <li class="nav-item"><a href="#" class="nav-link">contatti</a></li>
+                              <li class="nav-item"><a href="#" class="nav-link">INFO</a></li>
+                              <li class="nav-item"><a href="#" class="nav-link">cose</a></li>
+                          </ul>
+                    
+                      
+                      </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                  
+                  
+                </div>
+          </nav>
+      </footer>
     </body>
 </html>
