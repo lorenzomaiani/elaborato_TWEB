@@ -13,14 +13,14 @@
         }
     }
 
-    if(isUserLoggedIn() && $_SESSION["username"] == "Admin"){
+    if(isUserLoggedIn() && $_SESSION["username"] == "Admin"){ //admin_login
         $params["content"] = "adminLogin.php";
         $params["title"] = "Admin";
         $params["mainTitle"] = "Admin";
         $params["user"] = "Admin";
         $params["showLogin"] = "yes";
     }
-    else if(isUserLoggedIn()){
+    else if(isUserLoggedIn()){  // user_login
         $params["content"] = "template/userLogin.php";
         $params["script"] = "yes";
         $params["title"] = "Homepage - ".$_SESSION["username"];
@@ -30,7 +30,8 @@
         $params["showShop"] = "yes";
         $params["showsubtitle"] = "yes";
         $params["timeString"] = getTime();
-
+        $params["message"] = $db->getMessagesByUsername($_SESSION["username"]);
+        $params["numMessage"] = count($params["message"]);
     }
     else{
         $params["content"] = "template/loginContent.php";

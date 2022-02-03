@@ -2,6 +2,18 @@
     <?php if(isset($params["showsubtitle"])): ?>
     <h2 name="subTitle"><?php echo $params["timeString"]." ".$params["user"]?></h2>
     <?php endif; ?>
+    
+    <?php if(isset($_params["numMessage"]) && $params["numMessage"] > 0): ?>
+        <form action="#" name="message">
+            <select name="message">
+                <option>Message <?php echo $params["numMessage"]?></option>
+                <?php foreach($params["message"] as $message): ?>
+                    <option><?php echo $message["messagescontent"]?></option>
+                <?php endforeach; ?>
+            </select>
+        </form>
+    <?php endif;?>
+
     <form action="search.php" method="GET">
         <input type="text" placeholder="Search" name="searchBox"/>
         <input type="submit" value="Search"/>

@@ -57,7 +57,7 @@
         }
 
         public function getProductByName($productName){
-            $query = "SELECT productname, productlabel, productimage FROM products WHERE productname = ?";
+            $query = "SELECT productname, productlabel, productimage,price,quantity FROM products WHERE productname = ?";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("s", $productName);
             $stmt->execute();
@@ -99,6 +99,13 @@
             $stmt->execute();
         }
 
+        public function removeAllProductFromCartByUsername($username){
+            $query = "DELETE FROM cart WHERE username = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("s", $username);
+            $stmt->execute();
+        }
+
         public function removeProductByName($productname){
             $query = "DELETE FROM products WHERE productname = ?";
             $stmt = $this->db->prepare($query);
@@ -110,6 +117,22 @@
             $query = "INSERT into products (productname, productlabel, productimage, price, quantity) VALUES (?, ?, ?,?,?)";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("sssss", $productname, $productdescription, $productimage,$productprice, $productquantity);
+            $stmt->execute();
+        }
+
+        public function getMessagesByUsername($username){
+            $query = "SELECT messagescontent FROM messages WHERE username = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("s", $username);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            return $result->fetch_all(MYSQLI_ASSOC);
+        }
+
+        public function addNewMessagesFromUsers($username,$msg){
+            $query = "INSERT into messages (username, messagesContent) VALUES (?, ?)";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("ss", $username, $msg);
             $stmt->execute();
         }
     }
