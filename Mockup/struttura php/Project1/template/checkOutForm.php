@@ -27,7 +27,7 @@
     <?php endforeach; ?>
 
     <footer>
-        <a href="checkOut.php?action=1" name="buy">Complete the shopping!</a>
+        <a href="checkOut.php?action=1"  name="buy">Complete the shopping!</a>
     </footer>
     
 </section>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
     <head lang="it">
         <title>Index</title>
@@ -8,13 +8,13 @@
         <link rel="stylesheet" href="css/style.css"/>
     </head>
 
-    <body class=" ">
+    <body >
        
             <main>
-            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <nav class="navbar navbar-expand-lg fixed-top bg-dark navbar-dark">
                 <a href="" class="navbar-brand ">Pagina del negozio</a>
                 <div class="col-md-3 offset-md-4">
-                    <h1 class="my-auto" name="Carrellotitle">Checkout</h1>
+                    <h1 class="my-auto" name="Carrellotitle">Carrello</h1>
                   </div>
                 <div class="container">
                     <div class="collapse navbar-collapse" id="navmenu">
@@ -43,49 +43,24 @@
         
              </nav>
    
-     <section class="cart ">
-         <div class="container bg-light bg-opacity-50 border border-dark p-2">
+     <section class="cart" >
+         <div class="container bg-opacity-50  bg-light bg-gradient" style="height: 100%;">
             <div class="row py-5 text-center">
-                <h2>I tuoi prodotti:</h2>
+                <h2 >Carrello di User</h2>
             </div>
            
          <div class="row align-items-center">
-             <div class="col-lg-3 ">
-                <div class="card">
-                    <img src="immaginiprova/surfingpika.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                     <h4>99.99$</h4>
-                    </div>
+             <div class="col-lg-3 text-center">
+                <h3 class="text-center" style=" font-size: 5rem ;">Il tuo carrello è vuoto!</h3>
                   </div>
              </div>
              
             <!-- row ends here-->
         </div>
-         </div>
+         
      </section>
-    <section  name="paynow"style="margin-top:20px;">
-        <div class="container bg-light bg-gradient p-2">
-        <div class="col-md-3 offset-md-5" >
-            <h2>Paga adesso:</h2>
-            <form action="#" method="POST">
-                <ul>
-                    <li><label>Username <input type="text"  class="form-control" id="floatingInput" placeholder="Username"></label></li>
-                    <li><label>Destination address: <input type="text" name="deliveryAddress"  class="form-control" id="floatingInput" placeholder="Address"/></label></li>
-                    <li class="creditcard">
-                    <label > Credit card info
-                    <div class="input-group">
-                     <input type="text" name="cardInfo"  class="form-control" id="floatingInput" placeholder="XXXX-XXXX-XXXX-XXXX" style="width: 60%;">
-                     <input type="password" name="cvv" maxlength="3"  class="form-control" id="floatingInput" placeholder="CVV">
-                    </div></label></li>
-                </ul> 
-            </form>
-            <a href="checkOut.php?action=1" role="button" class="btn btn-info" style= "width: 100%; " name="buy">Complete the shopping!</a>
-       </div>
-      </div>
-    </section>
-  <footer>
+   <aside></aside>
+  <footer class="fixed-bottom" >
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <a href="" class="navbar-brand ">Pagina del negozio</a>
         <div class="container">
@@ -105,7 +80,7 @@
         
 </div>
 </nav>
-  </footer>
+  </footer >
 </main>
       </body>
 

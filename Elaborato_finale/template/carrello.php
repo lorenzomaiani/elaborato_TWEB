@@ -1,5 +1,5 @@
 <section class="cart ">
-         <div class="container bg-gradient border border-dark">
+         <div class="container bg-gradient  bg-opacity-50  bg-light ">
             <div class="row py-5 text-center">
                 <h2>Carrello di <?php $_SESSION["username"]?></h2>
             </div>
@@ -12,9 +12,7 @@
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                      <h4>99.99$</h4>
-                     <form action="#">
-                      <button type="button" class="btn btn-info bg-danger" style= "width: 100%; "> Remove Product <i class="bi-cart-x"></i></button>
-                   </form>
+                     <a href="#" role="button" class="btn btn-info bg-danger" style= "width: 100%; "> Remove Product <i class="bi-cart-x"></i></a>
                     </div>
                   </div>
              </div>

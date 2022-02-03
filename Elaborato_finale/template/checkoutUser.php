@@ -1,5 +1,5 @@
 <section class="cart ">
-         <div class="container bg-secondary bg-gradient border border-dark p-2">
+         <div class="container  bg-opacity-50  bg-light  p-2">
             <div class="row py-5 text-center">
                 <h2>I tuoi prodotti:</h2>
             </div>
@@ -36,6 +36,7 @@
                     </div></label></li>
                 </ul> 
             </form>
+            <a href="checkOut.php?action=1" role="button" class="btn btn-info" style= "width: 100%; " name="buy">Complete the order!</a>
        </div>
       </div>
     </section>

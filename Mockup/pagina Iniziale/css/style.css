@@ -3,6 +3,12 @@
     padding:0;
     box-sizing: border-box;
 }
+.container{
+    margin-top: 10px;
+    margin-bottom:10px;
+    
+}
+
 .search{
     border: 2px pink;
     width: 80%;
@@ -14,6 +20,10 @@
 .badge{
    color: white;
    background-color:indianred;
+}
+nav{
+    position: fixed;
+        top: 0;
 }
 .btn0{
     background: lightskyblue;
@@ -30,12 +40,12 @@
 }
 body{
     background: url(./bgprove/xymap.jpg);
-    background-size: cover;
-    background-repeat: repeat;
+    background-size:auto;
+    background-repeat: auto;
 }
 .main{
     background: url(./bgprove/prova.jpg);
-    background-size:  auto;
+    background-size:  cover;
     width: 98%;
     margin-left: 1%;
     margin-right: 1%;
@@ -101,12 +111,4 @@ section[name=checkoutbtn]{
     margin-bottom: 20px;
 }
 
-aside{
-    text-align: center;
-    margin-top: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
 
-aside > p{
-    margin : 0;
-}

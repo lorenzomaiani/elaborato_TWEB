@@ -18,12 +18,13 @@
                     <input class="btn0" type="submit" value="Submit" name="loginButton"/>
                     <input class="btn0" type="reset" value="Reset" name="resetButton"/>
                 </form>
+                <p class="text-center" name="info">Don't have an account? <a href="registration.php" name="registration">Register</a></p>
             </section>
         </main>
       
-      <p class="text-center" name="info">Don't have an account? <a href="registration.php" name="registration">Register</a></p>
+     
     </div>
-<aside></aside>
+
         <div class="container" style="height: 100%;">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -64,4 +65,4 @@
             </button>
           </div>
         </div>
-        <aside> </aside>
+        

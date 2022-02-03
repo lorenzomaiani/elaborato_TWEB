@@ -13,7 +13,7 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <nav class="navbar navbar-expand-lg bg-dark fixed-top p-2 navbar-dark">
           <a href="index.php" class="navbar-brand ">Pagina del negozio</a>
 
       <?php if(isset($params["navLogin"])):?>
@@ -58,7 +58,7 @@
       </main>
 
 
-        <footer>
+        <footer class="fixed-bottom">
             <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
                 <a href="" class="navbar-brand ">Pagina del negozio</a>
                   <div class="container">
