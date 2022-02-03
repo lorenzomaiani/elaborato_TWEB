@@ -17,3 +17,20 @@ CREATE TABLE carrello (
 	nomeprodotto VARCHAR(30)
 )
 
+INSERT INTO prodotti (nomeprodotto,descrizioneprodotto,quantitàprodotto,immagineprodotto,prezzoprodotto) 
+VALUES ("Charizard","Rare Vivid VoltageMint",5,"chari1.jpg",6)
+
+INSERT INTO prodotti (nomeprodotto,descrizioneprodotto,quantitàprodotto,immagineprodotto,prezzoprodotto) 
+VALUES ("Charizard 25th","HoloRare Celebration Mint",7,"charibase.jpg",50)
+
+INSERT INTO prodotti (nomeprodotto,descrizioneprodotto,quantitàprodotto,immagineprodotto,prezzoprodotto) 
+VALUES ("MewVmax","UltraRare Fusion Strike Excellent condition",7,"mew.jpg",20)
+
+INSERT INTO prodotti (nomeprodotto,descrizioneprodotto,quantitàprodotto,immagineprodotto,prezzoprodotto) 
+VALUES ("Box Pikachu","contiene 4 buste dell'espansione shining fates, una carta Pikachu V promozionale ed una carta Jumbo Pikachu V",5,"pikabox.jpg",40)
+
+INSERT INTO prodotti (nomeprodotto,descrizioneprodotto,quantitàprodotto,immagineprodotto,prezzoprodotto) 
+VALUES ("Pikachu(promo)"," PromoRare Special Edition Mint",5,"rarepika.jpg",115)
+
+INSERT INTO prodotti (nomeprodotto,descrizioneprodotto,quantitàprodotto,immagineprodotto,prezzoprodotto) 
+VALUES ("SurfingPikachuV","Secret Rare Celebrations Excellent condition",5,"surfingpika.jpg",8)
