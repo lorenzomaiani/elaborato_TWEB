@@ -29,12 +29,13 @@
     font-family: 'Brush Script MT', cursive;
 }
 body{
-    background: url(./bgprove/prova.jpg);
+    background: url(./bgprove/xymap.jpg);
     background-size: cover;
+    background-repeat: repeat;
 }
 .main{
     background: url(./bgprove/prova.jpg);
-    background-size: cover;
+    background-size:  auto;
     width: 98%;
     margin-left: 1%;
     margin-right: 1%;

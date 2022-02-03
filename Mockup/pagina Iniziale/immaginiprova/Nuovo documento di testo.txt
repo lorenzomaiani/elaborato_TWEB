@@ -1,0 +1,6 @@
+chari1: Name: Charizard. desc: Rare Vivid VoltageMint price 5.99$
+charibase: Name: Charizard 25th desc: HoloRare Celebration Mint price: 49.99$
+mew: Name: MewVmax desc: UltraRare Fusion Strike Excellent condition price: 19.99$
+pikabox: Name: Box Pikachu desc: contiene 4 buste dell'espansione shining fates, una carta Pikachu V promozionale ed una carta Jumbo Pikachu V price:39.99$
+rarepika: name:Pikachu(promo) desc: PromoRare Special Edition Mint price: 115$
+surfingpika: name: SurfingPikachuV desc: Secret Rare Celebrations Excellent condition price:8$
