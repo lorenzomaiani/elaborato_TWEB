@@ -22,6 +22,7 @@
    background-color:indianred;
 }
 
+
 .btn0{
     background: lightskyblue;
     border-color: black;
@@ -35,13 +36,14 @@
     margin-left: 2%;
     font-family: 'Brush Script MT', cursive;
 }
+
 body{
-    background: url(./bgprove/xymap.jpg);
-    background-size:auto;
+    background: url(../img/immagine_sfondo_2.jpg);
+    background-size: cover;
     background-repeat: auto;
 }
 .main{
-    background: url(./bgprove/prova.jpg);
+    background: url(../img/immagine_sfondo_1.jpg);
     background-size:  cover;
     width: 98%;
     margin-left: 1%;

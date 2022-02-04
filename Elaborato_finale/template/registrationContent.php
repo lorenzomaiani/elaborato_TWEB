@@ -3,13 +3,13 @@
                 
                 <form action="registration.php" method="POST">
                     <label id="demo">
-                        Insert your Username: 
-                        <input type="text" name="username" class="form-control" id="floatingInput" placeholder="name@example.com" name="username">
+                        Inserisci il nuovo username: 
+                        <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Username" name="username">
                         <label for="floatingInput"></label>
                     </label>
                     <br/>
                     <label id="demo">
-                        Insert your Password: 
+                        Inserisci la tua password: 
                         <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
                         <label for="floatingPassword"></label>
                     </label>

@@ -3,11 +3,11 @@
     if(isset($_GET["searchBox"])){
         $search_result = $db->getProductByName($_GET["searchBox"]);
         if(count($search_result) > 0){
-            $params["content"] = "template/index.php";
-            $params["product"] = $search_result;
+            $params["content"] = "template/homepageUser.php";
+            $params["prodotti"] = $search_result;
         }
         else{
-            $params["content"] = "errorSearch.php";  // da fare
+            $params["content"] = "errorSearch.php";
             $params["searchError"] = $_GET["searchBox"];
         }
     }

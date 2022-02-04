@@ -20,8 +20,10 @@
         $params["content"] = "template/homepageUser.php";   #pagina principale utente
         $params["title"] = "Homepage - ".$_SESSION["username"];
         $params["user"] = $_SESSION["username"];
-        $params["product"] = $db->getSomeProduct(4);
+        $params["prodotti"] = $db->getSomeProduct(5);
         $params["navHomepage"] = "yes";
+        $params["notifiche"] = $db->getMessagesByUsername($_SESSION["username"]);
+        $params["numNotifiche"] = count($params["notifiche"]);
     }
     
     else{

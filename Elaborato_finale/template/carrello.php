@@ -1,30 +1,67 @@
 <section class="cart ">
-         <div class="container bg-gradient  bg-opacity-50  bg-light ">
+
+        <div class="container bg-gradient  bg-opacity-50  bg-light ">
             <div class="row py-5 text-center">
-                <h2>Carrello di <?php $_SESSION["username"]?></h2>
+                <h2>Carrello di <?php echo $_SESSION["username"]?> </h2>
             </div>
-           
+
+        <?php if(count($params["prodotti"]) == 0):?>
+        <div class="row align-items-center">
+            <div class="col-lg-3 text-center">
+                <h3 class="text-center" style=" font-size: 5rem ;">Il tuo carrello è vuoto!</h3>
+            </div>
+        </div>
+        <?php endif;?>
+
+        <?php foreach($params["prodotti"] as $prodotti): ?>
          <div class="row align-items-center">
              <div class="col-lg-3 ">
                 <div class="card">
-                    <img src="immaginiprova/derieri.jpg" class="card-img-top" alt="...">
+                    <img src="img/<?php echo $prodotti["immagineprodotto"]?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                     <h4>99.99$</h4>
-                     <a href="#" role="button" class="btn btn-info bg-danger" style= "width: 100%; "> Remove Product <i class="bi-cart-x"></i></a>
+                      <h5 class="card-title"><?php echo $prodotti["nomeprodotto"]?></h5>
+                      <p class="card-text"><?php echo $prodotti["descrizioneprodotto"]?></p>
+                     <h4><?php echo $prodotti["prezzoprodotto"]?>€</h4>
+                     <a href="shop.php?action=3&username=<?php echo $_SESSION["username"]?>&nomeprodotto=<?php echo $prodotti["nomeprodotto"]?>" role="button" class="btn btn-info bg-danger" style= "width: 100%; ">Rimuovi prodotto dal carrello <i class="bi-cart-x"></i></a>
                     </div>
                   </div>
              </div>
              
             <!-- row ends here-->
+
+        <?php endforeach;?>
         </div>
-         </div>
+        </div>
 </section>
 <section  name="checkoutbtn">
     <div class="container">
-    <div class="col-md-3 offset-md-5" >
-    <button type="button" class="btn btn-light btn-lg"><a href="#">Go to checkout</a></button>
-    </div>
+        <div class="col-md-3 offset-md-5" >
+            <button type="button" class="btn btn-light btn-lg"><a href="shop.php?action=shop">Vai al checkout</a></button>
+        </div>
     </div>
 </section>
+
+<?php if(count($params["prodotti"]) != 0):?>
+    <footer>
+          <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+              <a href="" class="navbar-brand ">Pagina del negozio</a>
+                <div class="container">
+                    <div class="collapse navbar-collapse" id="navmenu">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a href="#" class="nav-link">contatti</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">INFO</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">cose</a></li>
+                        </ul>
+                  
+                    
+                    </div>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                
+                
+                </div>
+          </nav>
+      </footer>
+
+<?php endif;?>

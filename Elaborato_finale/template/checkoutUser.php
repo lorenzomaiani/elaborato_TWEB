@@ -5,17 +5,18 @@
             </div>
            
          <div class="row align-items-center">
+            <?php foreach($params["prodotti"] as $prodotti):?>
              <div class="col-lg-3 ">
                 <div class="card">
-                    <img src="immaginiprova/derieri.jpg" class="card-img-top" alt="...">
+                    <img src="img/<?php echo $prodotti["immagineprodotto"]?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                     <h4>99.99$</h4>
+                      <h5 class="card-title"><?php echo $prodotti["nomeprodotto"]?></h5>
+                      <p class="card-text"><?php echo $prodotti["descrizioneprodotto"]?></p>
+                     <h4><?php echo $prodotti["prezzoprodotto"]?>€</h4>
                     </div>
                   </div>
              </div>
-             
+             <?php endforeach; ?>
             <!-- row ends here-->
         </div>
          </div>

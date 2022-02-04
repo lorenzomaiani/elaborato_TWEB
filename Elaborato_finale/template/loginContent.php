@@ -1,16 +1,15 @@
-
 <section class=" border border-info  bg-opacity-10" name="mainSection">
-                <h2 name="subTitle">Insert the following information: </h2>
+                <h2 name="subTitle">Inserisci le seguenti informazioni</h2>
                 
                 <form action="index.php" method="POST">
                     <label id="demo">
-                        Insert your Username: 
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="username"/>
+                        Inserisci il tuo Username: 
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username"/>
                         <label for="floatingInput"></label>
                     </label>
                     <br/>
                     <label id="demo">
-                        Insert your Password: 
+                        Inserisci la tua Password: 
                         <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password"/>
                         <label for="floatingPassword"></label>
                     </label>
@@ -18,7 +17,7 @@
                     <input class="btn0" type="submit" value="Submit" name="loginButton"/>
                     <input class="btn0" type="reset" value="Reset" name="resetButton"/>
                 </form>
-                <p class="text-center" name="info">Don't have an account? <a href="registration.php" name="registration">Register</a></p>
+                <p class="text-center" name="info">Non hai un account? Registrati ora! <a href="registration.php" name="registration">Registrati</a></p>
             </section>
         </main>
       
@@ -34,21 +33,21 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="bgprove/prova.jpg" class=" img-fluid" alt="...">
+                <img src="img/immagine_sfondo_1.jpg" class=" img-fluid" alt="">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>First slide label</h5>
                   <p>Some representative placeholder content for the first slide.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="bgprove/prova.jpg" class="img-fluid"  alt="...">
+                <img src="img/immagine_sfondo_2.jpg" class="img-fluid"  alt="">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Second slide label</h5>
                   <p>Some representative placeholder content for the second slide.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="bgprove/prova.jpg" class=" img-fluid" alt="...">
+                <img src="img/immagine_sfondo_3.jpg" class=" img-fluid" alt="">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Third slide label</h5>
                   <p>Some representative placeholder content for the third slide.</p>
@@ -65,4 +64,26 @@
             </button>
           </div>
         </div>
+
+        <footer>
+          <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+              <a href="" class="navbar-brand ">Pagina del negozio</a>
+                <div class="container">
+                    <div class="collapse navbar-collapse" id="navmenu">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a href="#" class="nav-link">contatti</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">INFO</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">cose</a></li>
+                        </ul>
+                  
+                    
+                    </div>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                
+                
+                </div>
+          </nav>
+      </footer>
         
