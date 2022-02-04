@@ -21,10 +21,7 @@
    color: white;
    background-color:indianred;
 }
-nav{
-    position: fixed;
-        top: 0;
-}
+
 .btn0{
     background: lightskyblue;
     border-color: black;
