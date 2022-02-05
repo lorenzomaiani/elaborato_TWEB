@@ -10,6 +10,7 @@
         $params["content"] = "template/carrello.php";
         $params["title"] = "Carrello - ".$_SESSION["username"];
         $params["prodotti"] = $db->getProductFromCartByUsername($_SESSION["username"]);
+        $params["navTitle"] = "Carrello";
         require_once("template/base.php");
     }
 
@@ -21,6 +22,7 @@
     if($_GET["action"] == "shop"){
         $params["content"] ="template/checkoutUser.php";
         $params["title"] = "Checkout - ".$_SESSION["username"];
+        $params["navTitle"] = "Checkout";
         $params["prodotti"] = $db->getProductFromCartByUsername($_SESSION["username"]);
         require_once("template/base.php");
     }

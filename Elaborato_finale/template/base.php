@@ -16,13 +16,18 @@
         <nav class="navbar navbar-expand-lg bg-dark p-2 navbar-dark">
           <a href="index.php" class="navbar-brand ">Pagina del negozio</a>
 
-      <?php if(isset($params["navLogin"])):?>
+
+
+      <?php if(isset($params["navTitle"])):?>
           <div class="col-md-3 offset-md-4">
-            <h1 class="my-auto" name="loginTitle">Login</h1>
+            <h1 class="my-auto" name="loginTitle"><?php echo $params["navTitle"];?></h1>
           </div>
       <?php endif;?>
 
-      <?php if(isset($params["navHomepage"])):?>
+
+
+
+    <?php if(isset($params["navHomepageUser"])):?>
               <form class ="d-flex" style="width: 100%; margin-left: 20%;" action="search.php" methods="GET">
                   <input class="px-2 search" type="search" name="searchBox" placeholder="Cerca" aria-label="Cerca"/>
                   <button class="btn0" type="submit">Cerca</button>
@@ -42,13 +47,51 @@
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="bi-bell"></i> <span class="badge"><?php echo $params["numNotifiche"]?></span>
                 </button>
+                <?php if($params["numNotifiche"] > 0):?>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <?php foreach($params["notifiche"] as $notifiche):?>
                   <li><a class="dropdown-item" href="#"><?php echo $notifiche["testonotifica"]?></a></li>
                   <?php endforeach; ?>
                 </ul>
+                <?php endif; ?>
               </div>
     <?php endif;?>
+
+
+
+
+    <?php if(isset($params["navHomepageAdmin"])):?>
+          <form class ="d-flex" style="width: 100%; margin-left: 20%;" action="search.php" methods="GET">
+            <input class="px-2 search" type="search" name="searchBox" placeholder="Cerca" aria-label="Cerca"/>
+            <button class="btn0" type="submit">Cerca</button>
+          </form>
+          <div class="container">
+              <div class="collapse navbar-collapse" id="navmenu">
+                  <ul class="navbar-nav ms-auto">
+                      <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+                      <li class="nav-item"><a href="productManager.php?action=1" class="nav-link">Aggiungi item</a></li>
+                  </ul>
+              
+              
+                    </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+          <div class="dropdown" style="width: 100%;">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi-bell"></i> <span class="badge"><?php echo $params["numNotifiche"]?></span>
+          </button>
+          <?php if($params["numNotifiche"] > 0):?>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <?php foreach($params["notifiche"] as $notifiche): ?>
+              <li><a class="dropdown-item" href="#"><?php echo $params["testonotifica"]?></a></li>
+            <?php endforeach;?>
+          </ul>
+          <?php endif; ?>
+        </div>
+        <?php endif; ?>
+
     </nav>
 
     

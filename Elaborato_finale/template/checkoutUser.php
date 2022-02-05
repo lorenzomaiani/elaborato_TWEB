@@ -37,7 +37,7 @@
                     </div></label></li>
                 </ul> 
             </form>
-            <a href="checkOut.php?action=1" role="button" class="btn btn-info" style= "width: 100%; " name="buy">Complete the order!</a>
+            <a href="notifiche.php?action=1" role="button" class="btn btn-info" style= "width: 100%; " name="buy">Complete the order!</a>
        </div>
       </div>
     </section>

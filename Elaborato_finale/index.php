@@ -9,11 +9,12 @@
     }
 
     if(isUserLoggedIn() && $_SESSION["username"] == "Admin"){
-        $params["content"] = "adminLogin.php";   #pagina principale admin
+        $params["content"] = "homepageAdmin.php";   #pagina principale admin
         $params["title"] = "Admin";
-        $params["mainTitle"] = "Admin";
-        $params["user"] = "Admin";
-        $params["showLogin"] = "yes";
+        $params["navHomepageAdmin"] = "yes";
+        $params["prodotti"] = $db->getAllProduct();
+        $params["notifiche"] = $db->getMessagesByUsername($_SESSION["username"]);
+        $params["numNotifiche"] = count($params["notifiche"]);
     }
 
     else if(isUserLoggedIn()){
@@ -21,7 +22,7 @@
         $params["title"] = "Homepage - ".$_SESSION["username"];
         $params["user"] = $_SESSION["username"];
         $params["prodotti"] = $db->getSomeProduct(5);
-        $params["navHomepage"] = "yes";
+        $params["navHomepageUser"] = "yes";
         $params["notifiche"] = $db->getMessagesByUsername($_SESSION["username"]);
         $params["numNotifiche"] = count($params["notifiche"]);
     }
@@ -30,6 +31,7 @@
         $params["navLogin"] = "yes";
         $params["content"] = "template/loginContent.php";  #form per il login base
         $params["title"] = "Login";
+        $params["navTitle"] = "Login";
     }
 
     require_once("template/base.php");
