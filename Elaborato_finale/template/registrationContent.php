@@ -1,6 +1,8 @@
 <section class=" border border-info  bg-opacity-10" name="mainSection">
                 <h2 name="subTitle">Registrati ora: </h2>
-                <p class="text-center text-danger"></p>
+                <?php if(isset($params["erroreRegistrazione"])):?>
+                    <p class="text-center text-danger"><?php echo $params["erroreRegistrazione"];?></p>
+                <?php endif;?>
                 <form action="registration.php" method="POST">
                     <label id="demo">
                         Inserisci il nuovo username: 
@@ -14,7 +16,7 @@
                         <label for="floatingPassword"></label>
                     </label>
                     <br/>
-                    <input class="btn0" type="submit" value="Register" name="registrationButton"/>
+                    <input class="btn0" type="submit" value="Registrati" name="registrationButton"/>
                     <input class="btn0" type="reset" value="Reset" name="resetButton"/>
                 </form>
             </section>

@@ -8,20 +8,9 @@
     }
     
     if($_GET["action"] == 2){  // rimozione prodotto con pulsante
-        if(count($_GET["productname"]) > 0){
-            $db->removeProductByName($_GET["productname"]);
-            header("Location:index.php");
-        }
+        $db->removeProductByName($_GET["nomeprodotto"]);
+        header("Location:index.php");
     }
-    
-    /*
-    if($_GET["action"] == 3){  caso obsoleto, venivano mostrati i prodotti su richiesta dell'admin, ora vengono mostrati tutti subito.
-        $params["content"] = "template/adminLogin.php";
-        $params["title"] = "Admin";
-        $params["mainTitle"] = "Admin";
-        $params["product"] = $db->getAllProduct();
-    }
-    */
 
     //inserimento nuovo prodotto
     if(isset($_POST["nomeprodotto"]) && isset($_POST["descrizioneprodotto"]) && isset($_POST["immagineprodotto"]) && isset($_POST["prezzoprodotto"]) && isset($_POST["quantitàprodotto"])){ 
@@ -29,9 +18,9 @@
         $descrizioneprodotto = htmlspecialchars($_POST["descrizioneprodotto"]);
         $immagineprodotto = htmlspecialchars($_POST["immagineprodotto"]);
         $prezzoprodotto = $_POST["prezzoprodotto"];
-        $quantitàprodotto = $POST["quantitàprodotto"];
+        $quantitàprodotto = $_POST["quantitàprodotto"];
         $db->insertNewProduct($nomeprodotto, $descrizioneprodotto, $immagineprodotto, $prezzoprodotto, $quantitàprodotto);
-        header("Location:index.php");
+        header("Location: index.php");
         
     }
 

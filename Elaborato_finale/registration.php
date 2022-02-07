@@ -18,8 +18,7 @@
             header("Location:index.php");
         }
         else{
-            $params["script"] = "script";
-            $params["error"] = "Username already used!";  
+            $params["erroreRegistrazione"] = "Username già in uso!";  
         }
     }   
     $params["content"] = "template/registrationContent.php";

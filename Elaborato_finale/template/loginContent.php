@@ -1,6 +1,10 @@
 <section class=" border border-info  bg-opacity-10" name="mainSection">
                 <h2 name="subTitle">Inserisci le seguenti informazioni</h2>
-                <p class="text-center text-danger"></p>
+
+                <?php if(isset($params["erroreLogin"])):?>
+                  <p class="text-center text-danger"><?php echo $params["erroreLogin"]?></p>
+                <?php endif;?>
+
                 <form action="index.php" method="POST">
                     <label id="demo">
                         Inserisci il tuo Username: 
@@ -14,7 +18,7 @@
                         <label for="floatingPassword"></label>
                     </label>
                     <br/>
-                    <input class="btn0" type="submit" value="Submit" name="loginButton"/>
+                    <input class="btn0" type="submit" value="Accedi" name="loginButton"/>
                     <input class="btn0" type="reset" value="Reset" name="resetButton"/>
                 </form>
                 <p class="text-center" name="info">Non hai un account? Registrati ora! <a href="registration.php" name="registration">Registrati</a></p>

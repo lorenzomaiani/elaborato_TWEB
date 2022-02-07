@@ -52,7 +52,7 @@
                   <?php foreach($params["notifiche"] as $notifiche):?>
                   <li><a class="dropdown-item" href="#"><?php echo $notifiche["testonotifica"]?></a></li>
                   <?php endforeach; ?>
-                  <li><a class="dropdown-item" href="#">Segna tutto come già letto <i class="bi-x"></i></a></li>
+                  <li><a class="dropdown-item" href="notifiche.php?action=2">Segna tutto come già letto <i class="bi-x"></i></a></li>
                 </ul>
                 <?php endif; ?>
               </div>
@@ -88,6 +88,7 @@
             <?php foreach($params["notifiche"] as $notifiche): ?>
               <li><a class="dropdown-item" href="#"><?php echo $params["testonotifica"]?></a></li>
             <?php endforeach;?>
+            <li><a class="dropdown-item" href="#">Segna tutto come già letto <i class="bi-x"></i></a></li>
           </ul>
           <?php endif; ?>
         </div>

@@ -21,7 +21,7 @@
                         <h5 class="card-title"><?php echo $prodotti["nomeprodotto"];?></h5>
                         <p class="card-text"><?php echo $prodotti["descrizioneprodotto"];?></p>
                         <h4><?php echo $prodotti["prezzoprodotto"];?>€</h4>
-                        <a href="productManager.php?action=2" role="button" class="btn btn-danger " style= "width: 100%; "> Rimuovi dal negozio <i class="bi-x-circle-fill"></i></a>
+                        <a href="productManager.php?action=2&nomeprodotto=<?php echo $prodotti["nomeprodotto"]?>" role="button" class="btn btn-danger " style= "width: 100%; "> Rimuovi dal negozio <i class="bi-x-circle-fill"></i></a>
                     </div>
                 </div>
             </div>

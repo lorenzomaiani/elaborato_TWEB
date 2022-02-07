@@ -100,15 +100,15 @@
         public function removeProductByName($nomeprodotto){
             $query = "DELETE FROM prodotti WHERE nomeprodotto = ?";
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param("s", $productname);
+            $stmt->bind_param("s", $nomeprodotto);
             $stmt->execute();
         }
 
         
-        public function insertNewProduct($nomeprodotto, $descrizioneprodotto, $immagineprodotto, $quantitàprodotto, $prezzoprodotto){
-            $query = "INSERT into prodotti (nomeprodotto, descrizioneprodotto, immagineprodotto, quantitàprodotto, prezzoprodotto) VALUES (?, ?, ?, ?, ?)";
+        public function insertNewProduct($nomeprodotto, $descrizioneprodotto, $immagineprodotto,$prezzoprodotto,$quantitàprodotto){
+            $query = "INSERT into prodotti (nomeprodotto, descrizioneprodotto, quantitàprodotto, immagineprodotto, prezzoprodotto) VALUES (?, ?, ?, ?, ?)";
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param("sssii", $nomeprodotto, $descrizioneprodotto, $immagineprodotto, $quantitàprodotto,$prezzoprodotto );
+            $stmt->bind_param("ssssi", $nomeprodotto, $descrizioneprodotto, $quantitàprodotto, $immagineprodotto,$prezzoprodotto );
             $stmt->execute();
         }
 
@@ -120,14 +120,14 @@
         }
 
         public function addNewMessagesFromUsers($username,$testonotifica){
-            $query = "INSERT INTO notifiche(username,testonotifica) VALUES (?,?)";
+            $query = "INSERT INTO notifiche(username,testonotifica,attivo) VALUES (?,?,1)";
             $stmt = $this->db->prepare($query);
             $stmt-> bind_param("ss", $username,$testonotifica);
             $stmt->execute();
         }
 
         public function getMessagesByUsername($username){
-            $query = "SELECT testonotifica FROM notifiche WHERE username = ?";
+            $query = "SELECT testonotifica FROM notifiche WHERE username = ? and attivo = 1";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("s", $username);
             $stmt->execute();
@@ -135,6 +135,12 @@
             return $result->fetch_all(MYSQLI_ASSOC);
         }
 
+        public function updateActiveMessages($username){
+            $query = "UPDATE notifiche SET attivo = 0 WHERE username = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("s", $username);
+            $stmt->execute();
+        }
 
     }
 ?>

@@ -6,6 +6,9 @@
         if(count($loginAccess) != 0){
             registerUser($loginAccess[0]);
         }
+        else{
+            $params["erroreLogin"] = "Username o Password errati. Se non si è registrati, fallo ora!";
+        }
     }
 
     if(isUserLoggedIn() && $_SESSION["username"] == "Admin"){
