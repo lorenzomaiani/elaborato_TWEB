@@ -1,5 +1,6 @@
 <section class=" border border-info  bg-opacity-10" name="mainSection">
                 <h2 name="subTitle">Inserisci le seguenti informazioni</h2>
+				
                 
                 <form action="index.php" method="POST">
                     <label id="demo">
