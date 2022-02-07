@@ -10,7 +10,7 @@
         </ul> 
     </form>
     
-    <h2 name="subTitle">Your products in cart</h2>
+    <h2 name="subTitle">Products in your cart</h2>
     <?php foreach($params["product"] as $product):?>
         <article>
             <img src="img/<?php echo $product["productimage"]?>" alt="article_image">
@@ -27,7 +27,7 @@
     <?php endforeach; ?>
 
     <footer>
-        <a href="checkOut.php?action=1"  name="buy">Complete the shopping!</a>
+        <a href="messages.php?action=1" name="buy">Complete the shopping!</a>
     </footer>
     
 </section>

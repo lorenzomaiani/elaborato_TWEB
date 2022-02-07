@@ -19,6 +19,9 @@
         $params["mainTitle"] = "Admin";
         $params["user"] = "Admin";
         $params["showLogin"] = "yes";
+        $params["message"] = $db->getMessagesByUsername($_SESSION["username"]);
+        $params["numMessage"] = count($params["message"]);
+        
     }
     else if(isUserLoggedIn()){  // user_login
         $params["content"] = "template/userLogin.php";

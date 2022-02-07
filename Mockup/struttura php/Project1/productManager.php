@@ -21,15 +21,21 @@
         $params["product"] = $db->getAllProduct();
     }
 
-    if(isset($_POST["productname"]) && isset($_POST["productdescription"]) && isset($_POST["productimage"]) && isset($_POST["productprice"]) && isset($_POST["productquantity"])){ //insert new product
+    if(isset($_POST["productname"]) && isset($_POST["productdescription"]) && isset($_FILES["productimage"]) && isset($_POST["productprice"]) && isset($_POST["productquantity"])){ //insert new product
         $productname = htmlspecialchars($_POST["productname"]);
         $productdescription = htmlspecialchars($_POST["productdescription"]);
         $productimage = htmlspecialchars($_POST["productimage"]);
         $productprice = $_POST["productprice"];
         $productquantity = $POST["productquantity"];
+        
         $db->insertNewProduct($productname, $productdescription, $productimage, $productprice, $productquantity);
         header("Location:login.php");
         
+    }
+
+    if(isset($_POST["quantityAdd"])){
+        $db->updateQuantityAdd($_POST["productname"],$_POST["quantityAdd"]);
+        header("Location:login.php");
     }
 
     require_once("template/base.php");

@@ -75,8 +75,22 @@
             return $result->fetch_all(MYSQLI_ASSOC);
         }
 
+        public function updateQuantityOfProducts($productname,$quantity){
+            $query = "UPDATE products SET quantity = ? - 1 WHERE productname = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("is" ,$quantity,$productname);
+            $stmt->execute();
+        }
+
+        public function updateQuantityAdd($productname,$quantity){
+            $query = "UPDATE products SET quantity = quantity + ? WHERE productname = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("is" ,$quantity,$productname);
+            $stmt->execute();
+        }
+
         public function getProductFromCartByUsername($username){
-            $query = "SELECT productname, productlabel, productimage, price FROM products WHERE productname IN (SELECT productname FROM cart WHERE username = ?)";
+            $query = "SELECT productname, productlabel, productimage, price, quantity FROM products WHERE productname IN (SELECT productname FROM cart WHERE username = ?)";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("s", $username);
             $stmt->execute();
@@ -121,7 +135,7 @@
         }
 
         public function getMessagesByUsername($username){
-            $query = "SELECT messagescontent FROM messages WHERE username = ?";
+            $query = "SELECT messagescontent FROM messages WHERE username = ? and active = 1";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("s", $username);
             $stmt->execute();
@@ -129,10 +143,24 @@
             return $result->fetch_all(MYSQLI_ASSOC);
         }
 
-        public function addNewMessagesFromUsers($username,$msg){
-            $query = "INSERT into messages (username, messagesContent) VALUES (?, ?)";
+        public function addNewMessagesByUsername($username,$msg){
+            $query = "INSERT into messages (username, messagesContent,active) VALUES (?, ?,1)";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("ss", $username, $msg);
+            $stmt->execute();
+        }
+
+        public function deleteAllMessageByUsername($username){ //not used
+            $query = "DELETE FROM messages WHERE username = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("s", $username);
+            $stmt->execute();
+        }
+
+        public function updateActiveMessages($username){
+            $query = "UPDATE messages SET active = 0 WHERE username = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("s", $username);
             $stmt->execute();
         }
     }

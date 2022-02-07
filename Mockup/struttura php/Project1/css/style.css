@@ -261,6 +261,10 @@ table{
     display:none;
 }
 
+p[name=soldOut]{
+    color:red;
+}
+
 
 
 @media screen and (min-width:768px){

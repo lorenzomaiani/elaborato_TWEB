@@ -10,7 +10,7 @@
                 <label name="insert">Insert the description of the product <textarea id="productdescription" name="productdescription"></textarea></label>
             </li>
             <li>
-                <label name="insert">Insert the image of product <input type="text" name="productimage"/></label>
+                <label name="insert">Insert the image of product <input type="file" name="productimage"/></label>
              </li>
              <li>
                  <label name="insert">Insert the price of product <input type="text" name="productprice"/></label>
