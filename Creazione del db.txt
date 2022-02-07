@@ -20,7 +20,8 @@ CREATE TABLE carrello (
 CREATE TABLE notifiche(
     idnotifica INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(30),
-    testonotifica VARCHAR(100)
+    testonotifica VARCHAR(100),
+    attivo INT
 )
 
 INSERT INTO prodotti (nomeprodotto,descrizioneprodotto,quantitàprodotto,immagineprodotto,prezzoprodotto) 
