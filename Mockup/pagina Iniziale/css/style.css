@@ -40,7 +40,7 @@ nav{
 }
 body{
     background: url(./bgprove/xymap.jpg);
-    background-size:auto;
+    background-size:cover;
     background-repeat: auto;
 }
 .main{
