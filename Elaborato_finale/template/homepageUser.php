@@ -1,7 +1,9 @@
 <section class="main">
         <div class="container">
             <div class="row">
+                <div class="col-lg-7">
                     <h1> Benvenuto <?php echo $_SESSION["username"]?></h1>
+                </div>
             </div>
         </div>
 </section>
@@ -19,7 +21,13 @@
                         <h5 class="card-title"><?php echo $prodotti["nomeprodotto"]?></h5>
                         <p class="card-text"><?php echo $prodotti["descrizioneprodotto"]?></p>
                         <h4><?php echo $prodotti["prezzoprodotto"]?>€</h4>
-                        <a href="shop.php?action=1&username=<?php echo $_SESSION["username"]?>&nomeprodotto=<?php echo $prodotti["nomeprodotto"]?>" role="button" class="btn btn-info " style= "width: 100%; ">Aggiungi al carrello<i class="bi-cart"></i></a>
+                        <form action="shop.php" method="POST">
+                            <label>Inserire la quantità: <input type="number" name="quantitàprodottoutente" require></label>
+                            <input type="submit" value="Aggiungi al carrello" role="button" class="btn btn-info" style= "width: 100%;"/>
+                            <input type="hidden" name="action" value="1"/>
+                            <input type="hidden" name="username" value="<?php echo $_SESSION["username"]?>"/>
+                            <input type="hidden" name="nomeprodotto" value="<?php echo $prodotti["nomeprodotto"]?>"/>
+                        </form>
                         </div>
                     </div>
                 </div>

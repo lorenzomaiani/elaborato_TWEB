@@ -4,7 +4,7 @@
                 <h2>Aggiungi un prodotto:</h2>
             </div>
            
-            <form action="productManager.php" method="POST" name="adminOption">
+            <form action="productManager.php" method="POST" name="adminOption" enctype="multipart/form-data">
                 <ul>
                     <li>
                         <div class="mb-3">
@@ -21,7 +21,7 @@
                     <li>
                         <div class="mb-3">
                             <label for="productimage" class="form-label">Immagine Prodotto</label>
-                            <input type="text" name="immagineprodotto" class="form-control" id="immagineprodotto" placeholder=""/>
+                            <input type="file" name="immagineprodotto" class="form-control" id="immagineprodotto" placeholder=""/>
                           </div>
                        
                      </li>
@@ -38,9 +38,7 @@
                           </div>
                      </li>
                 </ul>
-                <div class="d-flex justify-content-center">
                 <input class="btn0" type="submit" value="Aggiungi"/>
-                </div>
             </form>
          </div>
      </section>

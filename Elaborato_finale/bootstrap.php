@@ -11,6 +11,9 @@
 
     $db = new DataBase($servername, $username, $password, $dbname, $port);
     
+    // Creare costanti
+    define("UPLOAD_DIR", "./img/");
+
     //Function
     require_once("utilities/functions.php");
 ?>

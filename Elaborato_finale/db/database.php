@@ -74,7 +74,7 @@
         }
 
         public function getProductFromCartByUsername($username){
-            $query = "SELECT nomeprodotto, descrizioneprodotto, immagineprodotto, prezzoprodotto, quantitàprodotto FROM prodotti WHERE nomeprodotto IN (SELECT nomeprodotto FROM carrello WHERE username = ?)";
+            $query = "SELECT p.nomeprodotto, p.descrizioneprodotto, p.immagineprodotto, p.prezzoprodotto, c.quantitàprodotto FROM prodotti as p JOIN carrello as c WHERE c.nomeprodotto = p.nomeprodotto and c.username = ?";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("s", $username);
             $stmt->execute();
@@ -83,10 +83,20 @@
             return $result->fetch_all(MYSQLI_ASSOC);
         }
 
-        public function addProductToCart($username,$nomeprodotto){
-            $query = "INSERT into carrello (username, nomeprodotto) VALUES (?, ?)";
+        public function getQuantityFromCartByUsername($username){
+            $query = "SELECT quantitàprodotto FROM carrello WHERE username = ?";
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param("ss", $username, $nomeprodotto);
+            $stmt->bind_param("s", $username);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            return $result->fetch_all(MYSQLI_ASSOC);
+        }
+
+        public function addProductToCart($username,$nomeprodotto,$quantitàprodotto){
+            $query = "INSERT into carrello (username, nomeprodotto, quantitàprodotto) VALUES (?, ?, ?)";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("ssi", $username, $nomeprodotto, $quantitàprodotto);
             $stmt->execute();
         }
 

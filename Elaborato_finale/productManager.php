@@ -13,13 +13,18 @@
     }
 
     //inserimento nuovo prodotto
-    if(isset($_POST["nomeprodotto"]) && isset($_POST["descrizioneprodotto"]) && isset($_POST["immagineprodotto"]) && isset($_POST["prezzoprodotto"]) && isset($_POST["quantitàprodotto"])){ 
+    if(isset($_POST["nomeprodotto"]) && isset($_POST["descrizioneprodotto"]) && isset($_POST["prezzoprodotto"]) && isset($_POST["quantitàprodotto"])){ 
         $nomeprodotto = htmlspecialchars($_POST["nomeprodotto"]);
         $descrizioneprodotto = htmlspecialchars($_POST["descrizioneprodotto"]);
-        $immagineprodotto = htmlspecialchars($_POST["immagineprodotto"]);
         $prezzoprodotto = $_POST["prezzoprodotto"];
         $quantitàprodotto = $_POST["quantitàprodotto"];
-        $db->insertNewProduct($nomeprodotto, $descrizioneprodotto, $immagineprodotto, $prezzoprodotto, $quantitàprodotto);
+
+        list($result,$msg) = uploadImage(UPLOAD_DIR,$_FILES["immagineprodotto"]);
+        if ($result != 0){
+            $immagineprodotto = $msg;
+            $db->insertNewProduct($nomeprodotto, $descrizioneprodotto, $immagineprodotto, $prezzoprodotto, $quantitàprodotto);
+        }
+
         header("Location: index.php");
         
     }

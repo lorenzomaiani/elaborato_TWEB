@@ -1,8 +1,8 @@
 <?php
     require_once("bootstrap.php");
 
-    if($_GET["action"] == 1){   //add to cart DONE
-        $db->addProductToCart($_GET["username"], $_GET["nomeprodotto"]);
+    if(isset($_POST["action"]) == 1){   //aggiungi al carrello
+        $db->addProductToCart($_POST["username"], $_POST["nomeprodotto"],$_POST["quantitàprodottoutente"]);
         header("Location:index.php");
     }
 
@@ -14,7 +14,7 @@
         require_once("template/base.php");
     }
 
-    if($_GET["action"] == 3){ // remove product to cart
+    if($_GET["action"] == 3){ // rimuovi dal carrello
         $db->removeProductToCart($_GET["username"], $_GET["nomeprodotto"]);
         header("Location:index.php");
     }

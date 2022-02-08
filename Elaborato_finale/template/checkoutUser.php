@@ -12,6 +12,7 @@
                     <div class="card-body">
                       <h5 class="card-title"><?php echo $prodotti["nomeprodotto"]?></h5>
                       <p class="card-text"><?php echo $prodotti["descrizioneprodotto"]?></p>
+                      <p>Quantità scelta: <?php echo $prodotti["quantitàprodotto"]?></p>
                      <h4><?php echo $prodotti["prezzoprodotto"]?>€</h4>
                     </div>
                   </div>
