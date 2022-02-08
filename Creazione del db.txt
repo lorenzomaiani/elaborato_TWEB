@@ -14,7 +14,8 @@ CREATE TABLE prodotti (
 
 CREATE TABLE carrello (
 	username VARCHAR(30),
-	nomeprodotto VARCHAR(30)
+	nomeprodotto VARCHAR(30),
+	quantitàprodotto INT
 )
 
 CREATE TABLE notifiche(
