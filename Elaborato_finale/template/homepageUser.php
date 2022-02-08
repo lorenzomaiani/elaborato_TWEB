@@ -1,9 +1,7 @@
 <section class="main">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7">
                     <h1> Benvenuto <?php echo $_SESSION["username"]?></h1>
-                </div>
             </div>
         </div>
 </section>

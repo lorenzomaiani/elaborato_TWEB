@@ -38,7 +38,9 @@
                           </div>
                      </li>
                 </ul>
+                <div class="d-flex justify-content-center">
                 <input class="btn0" type="submit" value="Aggiungi"/>
+                </div>
             </form>
          </div>
      </section>

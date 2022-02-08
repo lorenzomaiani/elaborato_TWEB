@@ -8,7 +8,10 @@
     margin-bottom:10px;
     
 }
-
+.navbar{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
 .search{
     border: 2px pink;
     width: 80%;
@@ -44,8 +47,9 @@ body{
     background-repeat: auto;
 }
 .main{
-    background: url(./bgprove/prova.jpg);
-    background-size:  cover;
+    background: url(./bgprove/yveltal.jpg);
+    background-size: cover;
+    background-position: center;
     width: 98%;
     margin-left: 1%;
     margin-right: 1%;
@@ -69,6 +73,7 @@ body{
 }
 .card{
     margin-top:10px;
+    margin-bottom:10px;
     
 }
 .card-body{
@@ -90,13 +95,13 @@ h1[name=loginTitle]{
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 section[name=mainSection]{
     text-align: center;
     background-color: rgb(230, 193, 230);
     border-radius: 20px;
     margin: 0 30%;
 }
-
 label{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
