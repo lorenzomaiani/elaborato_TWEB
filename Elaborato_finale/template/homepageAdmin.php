@@ -19,9 +19,22 @@
                     <img src="img/<?php echo $prodotti["immagineprodotto"];?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $prodotti["nomeprodotto"];?></h5>
-                        <p class="card-text"><?php echo $prodotti["descrizioneprodotto"];?></p>
-                        <h4><?php echo $prodotti["prezzoprodotto"];?>€</h4>
-                        <a href="productManager.php?action=2&nomeprodotto=<?php echo $prodotti["nomeprodotto"]?>" role="button" class="btn btn-danger " style= "width: 100%; "> Rimuovi dal negozio <i class="bi-x-circle-fill"></i></a>
+
+                        <?php if($prodotti["quantitàprodotto"] > 0):?>
+                            <p class="card-text"><?php echo $prodotti["descrizioneprodotto"];?></p>
+                            <h4><?php echo $prodotti["prezzoprodotto"];?>€</h4>
+                            <p class="card-text">Quantità in stock: <?php echo $prodotti["quantitàprodotto"]?></p>
+                            <a href="productManager.php?action=2&nomeprodotto=<?php echo $prodotti["nomeprodotto"]?>" role="button" class="btn btn-danger " style= "width: 100%; "> Rimuovi dal negozio <i class="bi-x-circle-fill"></i></a>
+                        <?php endif;?>
+
+                        <?php if($prodotti["quantitàprodotto"] == 0):?>
+                            <p class="card-text text-danger">Sold out!</p>
+                            <form action="productManager.php" method="POST">
+                                <label>Inserisci la quantità del prodotto da aggiungere: <input type="number" name="quantitàAggiunta" min="0"/></label>
+                                <input type="submit" value="Aggiungi"/>
+                                <input type="hidden" name="nomeprodotto" value="<?php echo $prodotti["nomeprodotto"]?>"/>
+                            </form>
+                        <?php endif;?>
                     </div>
                 </div>
             </div>

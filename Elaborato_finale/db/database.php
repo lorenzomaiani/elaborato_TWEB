@@ -16,7 +16,8 @@
             $result = $stmt->get_result();
             return $result->fetch_all(MYSQLI_ASSOC);
         }
-
+        
+        // gestione login e registrazione
         public function checkLogin($username,$password){
             $query = "SELECT username FROM users WHERE username = ? AND password = ?";
             $stmt = $this->db->prepare($query);
@@ -44,8 +45,9 @@
             return $result->fetch_all(MYSQLI_ASSOC);
         }
         
+        // gestione prodotti e carrello
         public function getSomeProduct($n){
-            $query = "SELECT nomeprodotto, descrizioneprodotto, immagineprodotto,quantitàprodotto, prezzoprodotto FROM prodotti LIMIT ?";
+            $query = "SELECT nomeprodotto, descrizioneprodotto, immagineprodotto, quantitàprodotto, prezzoprodotto FROM prodotti LIMIT ?";
             $stmt = $this->db->prepare($query);
             $stmt->bind_param("i", $n);
             $stmt->execute();
@@ -129,6 +131,18 @@
             $stmt->execute();
         }
 
+        public function checkAlreadyInCart($username,$nomeprodotto){
+            $query = "SELECT nomeprodotto FROM carrello WHERE username = ? and nomeprodotto = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("ss", $username, $nomeprodotto);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            return $result->fetch_all(MYSQLI_ASSOC);
+        }
+
+
+        // gestione dei messaggi
         public function addNewMessagesFromUsers($username,$testonotifica){
             $query = "INSERT INTO notifiche(username,testonotifica,attivo) VALUES (?,?,1)";
             $stmt = $this->db->prepare($query);
@@ -145,6 +159,7 @@
             return $result->fetch_all(MYSQLI_ASSOC);
         }
 
+        //Parte di update del database
         public function updateActiveMessages($username){
             $query = "UPDATE notifiche SET attivo = 0 WHERE username = ?";
             $stmt = $this->db->prepare($query);
@@ -152,6 +167,26 @@
             $stmt->execute();
         }
 
+        public function updateQuantityOfProduct($nomeprodotto,$quantitàprodotto){  // operazione di rimozione fatta dall'user
+            $query = "UPDATE prodotti SET quantitàprodotto = quantitàprodotto - ? WHERE nomeprodotto = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("is", $quantitàprodotto,$nomeprodotto);
+            $stmt->execute();
+        }
+
+        public function addQuantityByProductname($nomeprodotto,$quantità){ // operazione di aggiunta fatta dall'admin
+            $query = "UPDATE prodotti SET quantitàprodotto = quantitàprodotto + ? WHERE nomeprodotto = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("is", $quantità,$nomeprodotto);
+            $stmt->execute();
+        }
+
+        public function updateQuantityOfProductAlreadyInCart($username,$nomeprodotto,$quantità){
+            $query = "UPDATE carrello SET quantitàprodotto = quantitàprodotto + ? WHERE nomeprodotto = ? and username = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("iss", $quantità,$nomeprodotto,$username);
+            $stmt->execute();
+        }
     }
 ?>
 

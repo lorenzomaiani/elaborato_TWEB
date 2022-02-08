@@ -2,7 +2,16 @@
     require_once("bootstrap.php");
 
     if(isset($_POST["action"]) == 1){   //aggiungi al carrello
-        $db->addProductToCart($_POST["username"], $_POST["nomeprodotto"],$_POST["quantitàprodottoutente"]);
+        // controllo se nel carrello c'è gia un prodotto con quel nome per lo user connesso
+        $prodottoConStessoNome = $db->checkAlreadyInCart($_POST["username"], $_POST["nomeprodotto"]);
+        if(count($prodottoConStessoNome) > 0){
+            //in caso affermativo, modifico solo la quantità
+            $db->updateQuantityOfProductAlreadyInCart($_POST["username"],$_POST["nomeprodotto"],$_POST["quantitàprodottoutente"]);
+        }
+        else{
+             //in caso negativo, aggiungo un nuovo elemento
+            $db->addProductToCart($_POST["username"], $_POST["nomeprodotto"],$_POST["quantitàprodottoutente"]);
+        }
         header("Location:index.php");
     }
 

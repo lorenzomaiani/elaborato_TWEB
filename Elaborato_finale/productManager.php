@@ -29,5 +29,10 @@
         
     }
 
+    if(isset($_POST["quantitàAggiunta"])){ //aggiunge la quantità voluta dall'Admin
+        $db->addQuantityByProductname($_POST["nomeprodotto"], $_POST["quantitàAggiunta"]);
+        header("Location: index.php");
+    }
+
     require_once("template/base.php");
 ?>

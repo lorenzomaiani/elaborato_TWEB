@@ -7,6 +7,11 @@
         }
         else{
             $msg = "Grazie per l'acquisto! A presto!";
+
+            $prodottiNelCarrello = $db->getProductFromCartByUsername($_SESSION["username"]);
+            foreach ($prodottiNelCarrello as $prodottiCarrello){
+                $db->updateQuantityOfProduct($prodottiCarrello["nomeprodotto"],$prodottiCarrello["quantitàprodotto"]);
+            }
         }
         $db->addNewMessagesFromUsers($_SESSION["username"], $msg);
         $db->removeAllProductFromCartByUsername($_SESSION["username"]);

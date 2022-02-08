@@ -16,18 +16,24 @@
             <?php foreach($params["prodotti"] as $prodotti): ?>
                 <div class="col-lg-3 ">
                     <div class="card">
-                        <img src="img/<?php echo $prodotti["immagineprodotto"]?>" class="card-img-top" alt="..."/>
+                        <img src="img/<?php echo $prodotti["immagineprodotto"]?>" class="card-img-top" alt="Immagine raffigurativa del prodotto"/>
                         <div class="card-body">
-                        <h5 class="card-title"><?php echo $prodotti["nomeprodotto"]?></h5>
-                        <p class="card-text"><?php echo $prodotti["descrizioneprodotto"]?></p>
-                        <h4><?php echo $prodotti["prezzoprodotto"]?>€</h4>
-                        <form action="shop.php" method="POST">
-                            <label>Inserire la quantità: <input type="number" name="quantitàprodottoutente" require></label>
-                            <input type="submit" value="Aggiungi al carrello" role="button" class="btn btn-info" style= "width: 100%;"/>
-                            <input type="hidden" name="action" value="1"/>
-                            <input type="hidden" name="username" value="<?php echo $_SESSION["username"]?>"/>
-                            <input type="hidden" name="nomeprodotto" value="<?php echo $prodotti["nomeprodotto"]?>"/>
-                        </form>
+                        <?php if($prodotti["quantitàprodotto"] > 0):?>
+                            <h5 class="card-title"><?php echo $prodotti["nomeprodotto"]?></h5>
+                            <p class="card-text"><?php echo $prodotti["descrizioneprodotto"]?></p>
+                            <h4><?php echo $prodotti["prezzoprodotto"]?>€</h4>
+                            <form action="shop.php" method="POST">
+                                <label>Inserire la quantità: <input type="number" name="quantitàprodottoutente" min="1" max="<?php echo $prodotti["quantitàprodotto"]?>" require></label>
+                                <input type="submit" value="Aggiungi al carrello" role="button" class="btn btn-info" style= "width: 100%;"/>
+                                <input type="hidden" name="action" value="1"/>
+                                <input type="hidden" name="username" value="<?php echo $_SESSION["username"]?>"/>
+                                <input type="hidden" name="nomeprodotto" value="<?php echo $prodotti["nomeprodotto"]?>"/>
+                            </form>
+                        <?php endif;?>
+
+                        <?php if($prodotti["quantitàprodotto"] == 0):?>
+                            <p class="card-text text-danger">Sold out!</p>
+                        <?php endif;?>
                         </div>
                     </div>
                 </div>
