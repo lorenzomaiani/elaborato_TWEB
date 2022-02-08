@@ -14,13 +14,14 @@
 
     <body>
         <nav class="navbar navbar-expand-lg bg-dark p-2 navbar-dark">
+        <div class="container">
           <a href="index.php" class="navbar-brand ">Pagina del negozio</a>
 
 
 
       <?php if(isset($params["navTitle"])):?>
           <div class="col-md-3 offset-md-4">
-            <h1 class="my-auto" name="loginTitle"><?php echo $params["navTitle"];?></h1>
+            <h1 class="my-auto"></h1>
           </div>
       <?php endif;?>
 
@@ -43,7 +44,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
               </div>
-              <div class="dropdown" style="width: 100%;">
+              <div class="dropdown" >
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="bi-bell"></i> <span class="badge"><?php echo $params["numNotifiche"]?></span>
                 </button>
@@ -93,7 +94,7 @@
           <?php endif; ?>
         </div>
         <?php endif; ?>
-
+    </div>
     </nav>
 
     

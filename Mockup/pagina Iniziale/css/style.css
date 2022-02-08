@@ -12,6 +12,10 @@
     padding-left: 2rem;
     padding-right: 2rem;
 }
+h5{
+    font-size: 5rem;
+    color:black;
+}
 .search{
     border: 2px pink;
     width: 80%;

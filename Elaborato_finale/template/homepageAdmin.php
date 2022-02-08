@@ -1,10 +1,8 @@
 <section class="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <h1> Hello Admin</h1>
-                </div>
-            </div>
+<div class="container">
+        <div class="d-flex flex-column">
+         <h1 class=" ciao text-center justify-content-center align-items-around"> Hello Admin</h1>
+        </div>
         </div>
 </section>
 <section class="shop ">

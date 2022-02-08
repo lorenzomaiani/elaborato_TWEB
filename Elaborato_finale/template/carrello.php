@@ -1,6 +1,6 @@
 <section class="cart ">
 
-        <div class="container bg-gradient  bg-opacity-50  bg-light ">
+        <div class="container bg-gradient pb-2 bg-opacity-50  bg-light ">
             <div class="row py-5 text-center">
                 <h2>Carrello di <?php echo $_SESSION["username"]?> </h2>
             </div>
@@ -37,8 +37,8 @@
 <section  name="checkoutbtn">
     <div class="container">
         <?php if(count($params["prodotti"]) > 0):?> <!-- viene mostrato solo se ci sono prodotti nel carrello -->
-        <div class="col-md-3 offset-md-5" >
-            <button type="button" class="btn btn-light btn-lg"><a href="shop.php?action=shop">Vai al checkout</a></button>
+            <div class="d-flex justify-content-center" >
+            <button type="button" class="btn0  btn-lg"><a name="chkt" href="shop.php?action=shop">Vai al checkout</a></button>
         </div>
         <?php endif; ?>
     </div>
@@ -46,25 +46,14 @@
 
 <?php if(count($params["prodotti"]) != 0):?>
     <footer>
-          <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-              <a href="" class="navbar-brand ">Pagina del negozio</a>
-                <div class="container">
-                    <div class="collapse navbar-collapse" id="navmenu">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a href="#" class="nav-link">contatti</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">INFO</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">cose</a></li>
-                        </ul>
-                  
-                    
-                    </div>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                
-                
-                </div>
-          </nav>
-      </footer>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <a href="" class="navbar-brand ">Pagina del negozio</a>
+        <div class="container">
+            <div class="col-md-3 offset-md-4">
+            <h6 class="my-auto" style="color:white;"> contatti:email@xyz.aa email2@sdf.aa</h6>
+            </div>   
+        </div>
+    </nav>
+    </footer>
 
 <?php endif;?>

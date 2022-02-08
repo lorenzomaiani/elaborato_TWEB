@@ -28,7 +28,7 @@
      
     </div>
 
-        <div class="container" style="height: 100%;">
+        <div class="container " >
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -38,24 +38,12 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="img/immagine_sfondo_1.jpg" class=" img-fluid" alt="">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
-                </div>
               </div>
               <div class="carousel-item">
-                <img src="img/immagine_sfondo_2.jpg" class="img-fluid"  alt="">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
-                </div>
+                <img src="img/yveltal.jpg" class="img-fluid"  alt="">
               </div>
               <div class="carousel-item">
                 <img src="img/immagine_sfondo_3.jpg" class=" img-fluid" alt="">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
-                </div>
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -70,24 +58,13 @@
         </div>
 
         <footer>
-          <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-              <a href="" class="navbar-brand ">Pagina del negozio</a>
-                <div class="container">
-                    <div class="collapse navbar-collapse" id="navmenu">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a href="#" class="nav-link">contatti</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">INFO</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">cose</a></li>
-                        </ul>
-                  
-                    
-                    </div>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                
-                
-                </div>
-          </nav>
-      </footer>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <a href="" class="navbar-brand ">Pagina del negozio</a>
+        <div class="container">
+            <div class="col-md-3 offset-md-4">
+            <h6 class="my-auto" style="color:white;"> contatti:email@xyz.aa email2@sdf.aa</h6>
+            </div>   
+        </div>
+    </nav>
+    </footer>
         

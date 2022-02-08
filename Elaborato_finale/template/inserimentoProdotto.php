@@ -1,5 +1,5 @@
 <section class="shop ">
-         <div class="container bg-opacity-100  bg-light bg-gradient">
+         <div class="container pb-2 bg-opacity-100  bg-light bg-gradient">
             <div class="row py-5 self-align-center text-center">
                 <h2>Aggiungi un prodotto:</h2>
             </div>
@@ -38,7 +38,9 @@
                           </div>
                      </li>
                 </ul>
-                <input class="btn0" type="submit" value="Aggiungi"/>
+                <div class="d-flex justify-content-center">
+                <input class="btn0 p-2" type="submit" value="Aggiungi"/>
+              </div>
             </form>
          </div>
      </section>
