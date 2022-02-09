@@ -21,6 +21,9 @@
                             <h5 class="card-title"><?php echo $prodotti["nomeprodotto"]?></h5>
                             <p class="card-text"><?php echo $prodotti["descrizioneprodotto"]?></p>
                             <h4><?php echo $prodotti["prezzoprodotto"]?>€</h4>
+							 <?php if($prodotti["quantitàprodotto"] <= 2):?>
+                                <p class="card-text text-danger">Disponibilità limitata: <?php echo $prodotti["quantitàprodotto"]?></p>
+                            <?php endif;?>
                             <form action="shop.php" method="POST">
                                 <label>Inserire la quantità: <input type="number" name="quantitàprodottoutente" min="1" max="<?php echo $prodotti["quantitàprodotto"]?>" required></label>
                                 <input type="submit" value="Aggiungi al carrello" role="button" class="btn btn-info" style= "width: 100%; "/>
