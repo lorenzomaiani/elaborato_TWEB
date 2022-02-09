@@ -1,4 +1,4 @@
-<section class=" border border-info  bg-opacity-10" name="mainSection">
+<section class=" border border-info mt-2 " name="mainSection">
                 <h2 name="subTitle">Inserisci le seguenti informazioni</h2>
 
                 <?php if(isset($params["erroreLogin"])):?>

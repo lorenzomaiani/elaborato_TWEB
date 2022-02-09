@@ -5,7 +5,6 @@
 }
 .container{
     margin-top: 10px;
-    margin-bottom:10px;
     
 }
 .navbar{
@@ -14,7 +13,6 @@
 }
 
 .search{
-    border: 2px pink;
     width: 80%;
     height: 40px;
     border-radius: 60px;
@@ -28,8 +26,9 @@ h2{
     color: black;
 }
 .ciao{
-    margin-top: 20vh;
+    margin-top: 15vh;
     color:white;
+    font-size: 4rem;
 }
 
 a[name=chkt]{
@@ -41,10 +40,7 @@ a[name=chkt]{
    color: white;
    background-color:indianred;
 }
-nav{
-    position: fixed;
-        top: 0;
-}
+
 .btn0{
     background: lightskyblue;
     border-color: black;
@@ -69,20 +65,14 @@ body{
     background-position: center;
     width: 100%;
     height: 50vh;
-    border:black;
-    border: 2px;
     background-repeat: no-repeat;    
 }
-.main h1{
-    font-size: 4rem;
-    font: 'Brush Script MT',cursive;
-}
+
 
 .shop .cart{
     margin-top:1%;
     margin-bottom: 1%;
     margin-right:1%;
-    border:2px black;
     
 }
 
@@ -91,14 +81,8 @@ body{
     margin-bottom:10px;
     
 }
-.card-body{
-    border:2px;
-    border-color: black;
-}
-h1[name=Carrellotitle]{
-    color: white;
 
-}
+
 h1[name=mainTitle]{
     font-size: 2rem;
     color:lightblue;

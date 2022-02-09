@@ -17,15 +17,17 @@
 
       <?php if(isset($params["navTitle"])):?>
           <div class="col-md-3 offset-md-4">
-            <h1 class="my-auto">Banane</h1>
+            <h1 class="my-auto"></h1>
           </div>
       <?php endif;?>
 
     <?php if(isset($params["navHomepageUser"])):?>  <!--header mostrato nel caso di user-->
-              <form class ="d-flex" style="width: 100%; margin-left: 20%;" action="search.php" methods="GET">
+      <div class="col-md-3 offset-md-2">
+              <form class ="d-flex ms-lg-5" style="width: 100%;" action="search.php" methods="GET">
                   <input class="px-2 search" type="search" name="searchBox" placeholder="Cerca" aria-label="Cerca"/>
                   <button class="btn0" type="submit">Cerca</button>
               </form>
+            </div>
               <div class="container">
                     <div class="collapse navbar-collapse" id="navmenu">
                         <ul class="navbar-nav ms-auto">
@@ -53,10 +55,12 @@
     <?php endif;?>
 
     <?php if(isset($params["navHomepageAdmin"])):?> <!--Header mostrato in caso di Admin-->
-          <form class ="d-flex" style="width: 100%; margin-left: 20%;" action="search.php" methods="GET">
+      <div class="col-md-3 offset-md-2">
+          <form class ="d-flex ms-lg-5" style="width: 100%;" action="search.php" methods="GET">
             <input class="px-2 search" type="search" name="searchBox" placeholder="Cerca" aria-label="Cerca"/>
             <button class="btn0" type="submit">Cerca</button>
           </form>
+    </div>
           <div class="container">
               <div class="collapse navbar-collapse" id="navmenu">
                   <ul class="navbar-nav ms-auto">

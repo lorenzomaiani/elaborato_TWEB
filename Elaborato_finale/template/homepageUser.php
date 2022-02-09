@@ -13,10 +13,10 @@
         </div>  
         <div class="row align-items-center">
             <?php foreach($params["prodotti"] as $prodotti): ?>
-                <div class="col-lg-3 ">
+                <div class="col-6 col-sm-3">
                     <div class="card">
                         <img src="img/<?php echo $prodotti["immagineprodotto"]?>" class="card-img-top" alt="Immagine raffigurativa del prodotto"/>
-                        <div class="card-body">
+                        <div class="card-body shadow">
                         <?php if($prodotti["quantitàprodotto"] > 0):?>
                             <h5 class="card-title"><?php echo $prodotti["nomeprodotto"]?></h5>
                             <p class="card-text"><?php echo $prodotti["descrizioneprodotto"]?></p>

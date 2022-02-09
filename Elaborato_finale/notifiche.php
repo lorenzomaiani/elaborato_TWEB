@@ -11,7 +11,7 @@
             if ($quantitàInDB[0]["quantitàprodotto"] < $prodottiCarrello["quantitàprodotto"]){
                 $flag = 0;
             }
-            elseif ($quantitàResidua < 0){
+            elseif ($quantitàResidua == 0){
                 $flag = 2;
             }
         }
@@ -24,6 +24,12 @@
         elseif ($flag == 2){ //
             $msg = "Un prodotto è esaurito";
             $db->addNewMessagesFromUsers("Admin", $msg);
+            $msg = "Grazie per l'acquisto! A presto!";
+            $prodottiNelCarrello = $db->getProductFromCartByUsername($_SESSION["username"]);
+            foreach ($prodottiNelCarrello as $prodottiCarrello){
+                $db->updateQuantityOfProduct($prodottiCarrello["nomeprodotto"],$prodottiCarrello["quantitàprodotto"]);
+            }
+            $db->addNewMessagesFromUsers($_SESSION["username"], $msg);
         }
 
         else{
