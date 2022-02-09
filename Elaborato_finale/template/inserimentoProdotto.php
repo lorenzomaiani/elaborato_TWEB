@@ -1,5 +1,5 @@
 <section class="shop ">
-         <div class="container pb-2 bg-opacity-100  bg-light bg-gradient">
+         <div class="container p-2 bg-opacity-100  bg-light bg-gradient">
             <div class=" row py-5 text-center mx-5 bg-gradient border border-dark border-3 bg-light bg-opacity-75">
                 <h2>Aggiungi un prodotto:</h2>
             </div>

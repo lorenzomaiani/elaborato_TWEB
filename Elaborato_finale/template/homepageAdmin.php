@@ -6,7 +6,7 @@
         </div>
 </section>
 <section class="shop ">
-    <div class="container bg-opacity-50  bg-light bg-gradient">
+    <div class="container bg-opacity-50  bg-light bg-gradient p-2">
         <div class=" row py-5 text-center mx-5 bg-gradient border border-dark border-3 bg-light bg-opacity-75">
             <h2>I prodotti nel database:</h2>
         </div>
