@@ -33,13 +33,7 @@
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a href="index.php" class="nav-link">HOME</a></li>
                             <li class="nav-item"><a href="shop.php?action=2" class="nav-link">CARRELLO</a></li>
-                        </ul>
-                    </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-              </div>
-              <div class="dropdown" >
+                            <li><div class="dropdown mb-2 mb-sm-0" >
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="bi-bell"></i> <span class="badge"><?php echo $params["numNotifiche"]?></span>
                 </button>
@@ -51,7 +45,15 @@
                   <li><a class="dropdown-item" href="notifiche.php?action=2">Segna tutto come già letto<i class="bi-x"></i></a></li>
                 </ul>
                 <?php endif; ?>
+              </div></li>
+                            
+                        </ul>
+                    </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
               </div>
+              
     <?php endif;?>
 
     <?php if(isset($params["navHomepageAdmin"])):?> <!--Header mostrato in caso di Admin-->
@@ -66,15 +68,7 @@
                   <ul class="navbar-nav ms-auto">
                       <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
                       <li class="nav-item"><a href="productManager.php?action=1" class="nav-link">Aggiungi item</a></li>
-                  </ul>
-              
-              
-                    </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-          <div class="dropdown" style="width: 100%;">
+                     <li> <div class="dropdown mb-2 mb-sm-0" style="width: 100%;">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="bi-bell"></i> <span class="badge"><?php echo $params["numNotifiche"]?></span>
           </button>
@@ -86,7 +80,16 @@
             <li><a class="dropdown-item" href="notifiche.php?action=2">Segna tutto come già letto <i class="bi-x"></i></a></li>
           </ul>
           <?php endif; ?>
+        </div></li>
+                  </ul>
+              
+              
+                    </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+              <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
+         
         <?php endif; ?>
     </div>
     </nav>
