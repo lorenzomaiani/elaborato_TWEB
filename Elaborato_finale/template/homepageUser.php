@@ -8,7 +8,7 @@
 </section>
 <section class="shop ">
     <div class="container p-2  bg-opacity-50  bg-light bg-gradient">
-        <div class="row py-5 self-align-center text-center">
+        <div class=" row py-5 text-center mx-5 bg-gradient border border-dark border-3 bg-light bg-opacity-75">
             <h2>Negozio</h2>
         </div>  
         <div class="row align-items-center">

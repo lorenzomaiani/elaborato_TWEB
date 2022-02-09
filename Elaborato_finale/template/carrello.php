@@ -1,7 +1,7 @@
 <section class="cart ">
 
         <div class="container bg-gradient pb-2 bg-opacity-50  bg-light ">
-            <div class="row py-5 text-center">
+            <div class=" row py-5 text-center mx-5 bg-gradient border border-dark border-3 bg-light bg-opacity-75">
                 <h2>Carrello di <?php echo $_SESSION["username"]?> </h2>
             </div>
 
