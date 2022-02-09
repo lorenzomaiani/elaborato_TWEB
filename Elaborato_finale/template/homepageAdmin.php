@@ -27,7 +27,7 @@
                         <?php if($prodotti["quantitàprodotto"] == 0):?>
                             <p class="card-text text-danger">Sold out!</p>
                             <form action="productManager.php" method="POST">
-                                <label>Inserisci la quantità del prodotto da aggiungere: <input type="number" name="quantitàAggiunta" min="0"/></label>
+                                <label>Inserisci la quantità del prodotto da aggiungere: <input type="number" name="quantitàAggiunta" min="1" require/></label>
                                 <input type="submit" value="Aggiungi"/>
                                 <input type="hidden" name="nomeprodotto" value="<?php echo $prodotti["nomeprodotto"]?>"/>
                             </form>

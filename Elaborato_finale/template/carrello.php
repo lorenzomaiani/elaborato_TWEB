@@ -7,9 +7,7 @@
 
         <?php if(count($params["prodotti"]) == 0):?>
         <div class="row align-items-center">
-            <div class="col-lg-3 text-center">
                 <h3 class="text-center" style=" font-size: 5rem ;">Il tuo carrello è vuoto!</h3>
-            </div>
         </div>
         <?php endif;?>
 
