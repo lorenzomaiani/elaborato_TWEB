@@ -141,6 +141,15 @@
             return $result->fetch_all(MYSQLI_ASSOC);
         }
 
+        public function getQuantityInStock($nomeprodotto){
+            $query = "SELECT quantitàprodotto FROM prodotti WHERE nomeprodotto = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("s",$nomeprodotto);
+            $stmt->execute();
+
+            $result = $stmt->get_result();
+            return $result->fetch_all(MYSQLI_ASSOC);
+        }
 
         // gestione dei messaggi
         public function addNewMessagesFromUsers($username,$testonotifica){

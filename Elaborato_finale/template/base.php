@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
     <head>
         <title><?php echo $params["title"]?></title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"/>
         <link rel="stylesheet" href="css/style.css"/>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="login.js" type="text/javascript"></script>
     </head>
 
@@ -17,18 +15,13 @@
         <div class="container">
           <a href="index.php" class="navbar-brand ">Pagina del negozio</a>
 
-
-
       <?php if(isset($params["navTitle"])):?>
           <div class="col-md-3 offset-md-4">
-            <h1 class="my-auto"></h1>
+            <h1 class="my-auto">Banane</h1>
           </div>
       <?php endif;?>
 
-
-
-
-    <?php if(isset($params["navHomepageUser"])):?>
+    <?php if(isset($params["navHomepageUser"])):?>  <!--header mostrato nel caso di user-->
               <form class ="d-flex" style="width: 100%; margin-left: 20%;" action="search.php" methods="GET">
                   <input class="px-2 search" type="search" name="searchBox" placeholder="Cerca" aria-label="Cerca"/>
                   <button class="btn0" type="submit">Cerca</button>
@@ -53,16 +46,13 @@
                   <?php foreach($params["notifiche"] as $notifiche):?>
                   <li><a class="dropdown-item" href="#"><?php echo $notifiche["testonotifica"]?></a></li>
                   <?php endforeach; ?>
-                  <li><a class="dropdown-item" href="notifiche.php?action=2">Segna tutto come già letto <i class="bi-x"></i></a></li>
+                  <li><a class="dropdown-item" href="notifiche.php?action=2">Segna tutto come già letto<i class="bi-x"></i></a></li>
                 </ul>
                 <?php endif; ?>
               </div>
     <?php endif;?>
 
-
-
-
-    <?php if(isset($params["navHomepageAdmin"])):?>
+    <?php if(isset($params["navHomepageAdmin"])):?> <!--Header mostrato in caso di Admin-->
           <form class ="d-flex" style="width: 100%; margin-left: 20%;" action="search.php" methods="GET">
             <input class="px-2 search" type="search" name="searchBox" placeholder="Cerca" aria-label="Cerca"/>
             <button class="btn0" type="submit">Cerca</button>
@@ -87,9 +77,9 @@
           <?php if($params["numNotifiche"] > 0):?>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <?php foreach($params["notifiche"] as $notifiche): ?>
-              <li><a class="dropdown-item" href="#"><?php echo $params["testonotifica"]?></a></li>
+              <li><a class="dropdown-item" href="#"><?php echo $notifiche["testonotifica"]?></a></li>
             <?php endforeach;?>
-            <li><a class="dropdown-item" href="#">Segna tutto come già letto <i class="bi-x"></i></a></li>
+            <li><a class="dropdown-item" href="notifiche.php?action=2">Segna tutto come già letto <i class="bi-x"></i></a></li>
           </ul>
           <?php endif; ?>
         </div>
@@ -98,13 +88,9 @@
     </nav>
 
     
-
-
       <main>
         <?php require($params["content"]);?>
       </main>
-
-
 
 
     </body>

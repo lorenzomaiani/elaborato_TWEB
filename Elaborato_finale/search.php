@@ -3,12 +3,17 @@
     if(isset($_GET["searchBox"])){
         $search_result = $db->getProductByName($_GET["searchBox"]);
         if(count($search_result) > 0){
-            $params["content"] = "template/homepageUser.php";
+            if($_SESSION["username"] == "Admin"){
+                $params["content"] = "template/homepageAdmin.php";
+            }
+            else{
+                $params["content"] = "template/homepageUser.php";
+            }
             $params["prodotti"] = $search_result;
         }
         else{
-            $params["content"] = "errorSearch.php";
-            $params["searchError"] = $_GET["searchBox"];
+            $params["content"] = "errorericerca.php";
+            $params["errorericerca"] = $_GET["searchBox"];
         }
     }
     $params["user"] = $_SESSION["username"];

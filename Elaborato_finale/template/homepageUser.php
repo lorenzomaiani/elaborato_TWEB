@@ -23,7 +23,7 @@
                             <h4><?php echo $prodotti["prezzoprodotto"]?>€</h4>
                             <form action="shop.php" method="POST">
                                 <label>Inserire la quantità: <input type="number" name="quantitàprodottoutente" min="1" max="<?php echo $prodotti["quantitàprodotto"]?>" require></label>
-                                <input type="submit" value="Aggiungi al carrello" role="button" class="btn btn-info" style= "width: 100%;"/>
+                                <input type="submit" value="Aggiungi al carrello" role="button" class="btn btn-info" style= "width: 100%; "/>
                                 <input type="hidden" name="action" value="1"/>
                                 <input type="hidden" name="username" value="<?php echo $_SESSION["username"]?>"/>
                                 <input type="hidden" name="nomeprodotto" value="<?php echo $prodotti["nomeprodotto"]?>"/>

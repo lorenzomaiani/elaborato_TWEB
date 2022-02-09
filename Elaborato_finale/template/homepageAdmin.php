@@ -1,7 +1,7 @@
 <section class="main">
 <div class="container">
         <div class="d-flex flex-column">
-         <h1 class=" ciao text-center justify-content-center align-items-around"> Hello Admin</h1>
+         <h1 class=" ciao text-center justify-content-center align-items-around">Admin</h1>
         </div>
         </div>
 </section>
@@ -22,7 +22,6 @@
                             <p class="card-text"><?php echo $prodotti["descrizioneprodotto"];?></p>
                             <h4><?php echo $prodotti["prezzoprodotto"];?>€</h4>
                             <p class="card-text">Quantità in stock: <?php echo $prodotti["quantitàprodotto"]?></p>
-                            <a href="productManager.php?action=2&nomeprodotto=<?php echo $prodotti["nomeprodotto"]?>" role="button" class="btn btn-danger " style= "width: 100%; "> Rimuovi dal negozio <i class="bi-x-circle-fill"></i></a>
                         <?php endif;?>
 
                         <?php if($prodotti["quantitàprodotto"] == 0):?>
@@ -33,6 +32,7 @@
                                 <input type="hidden" name="nomeprodotto" value="<?php echo $prodotti["nomeprodotto"]?>"/>
                             </form>
                         <?php endif;?>
+                        <a href="productManager.php?action=2&nomeprodotto=<?php echo $prodotti["nomeprodotto"]?>" role="button" class="btn btn-danger " style= "width: 100%; "> Rimuovi dal negozio <i class="bi-x-circle-fill"></i></a>
                     </div>
                 </div>
             </div>

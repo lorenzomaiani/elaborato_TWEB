@@ -31,7 +31,6 @@
     }
     
     else{
-        $params["navLogin"] = "yes";
         $params["content"] = "template/loginContent.php";  #form per il login base
         $params["title"] = "Login";
         $params["navTitle"] = "Login";
