@@ -7,7 +7,7 @@
             registerUser($loginAccess[0]);
         }
         else{
-            $params["erroreLogin"] = "Username o Password errati. Se non si è registrati, fallo ora!";
+            $params["erroreLogin"] = "Username o Password errati. Se non sei già registrato, fallo ora!";
         }
     }
 
