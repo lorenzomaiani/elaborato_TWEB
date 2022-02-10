@@ -128,4 +128,18 @@ section[name=checkoutbtn]{
         color:white;
         font-size: 4rem;
     }
+
+    body{
+        background-image: none;
+        background-color: rgb(158, 158, 158);
+    }
+
+    body > footer, body > main > footer{
+        display:none;
+    }
+
+    section[name=mainSection]{
+        background-color: white;
+    }
+
 }

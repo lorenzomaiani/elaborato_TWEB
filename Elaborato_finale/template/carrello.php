@@ -1,5 +1,4 @@
 <section class="cart ">
-
         <div class="container bg-gradient p-2 bg-opacity-50  bg-light ">
             <div class=" row py-5 text-center mx-5 bg-gradient border border-dark border-3 bg-light bg-opacity-75">
                 <h2>Carrello di <?php echo $_SESSION["username"]?> </h2>
@@ -13,7 +12,7 @@
 
         <div class="row align-items-center">
             <?php foreach($params["prodotti"] as $prodotti): ?>
-            <div class="col-6 col-sm-3">
+            <div class="col-6 col-lg-3">
                 <div class="card shadow">
                     <img src="img/<?php echo $prodotti["immagineprodotto"]?>" class="card-img-top" alt="Immagine raffigurativa del prodotto">
                     <div class="card-body">
@@ -32,6 +31,7 @@
         </div>
     </div>
 </section>
+
 <section  name="checkoutbtn">
     <div class="container">
         <?php if(count($params["prodotti"]) > 0):?> <!-- viene mostrato solo se ci sono prodotti nel carrello -->
@@ -43,7 +43,7 @@
 </section>
 
 <?php if(count($params["prodotti"]) != 0):?>
-    <footer>
+<footer>
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <a href="" class="navbar-brand ">Pagina del negozio</a>
         <div class="container">
@@ -52,6 +52,6 @@
             </div>   
         </div>
     </nav>
-    </footer>
+</footer>
 
 <?php endif;?>

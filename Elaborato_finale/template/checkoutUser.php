@@ -6,7 +6,7 @@
            
          <div class="row align-items-center">
             <?php foreach($params["prodotti"] as $prodotti):?>
-             <div class="col-6 col-sm-3">
+             <div class="col-6 col-lg-3">
                 <div class="card shadow">
                     <img src="img/<?php echo $prodotti["immagineprodotto"]?>" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -29,9 +29,9 @@
             <form action="#" method="POST">
                 <ul>
                     <li><label>Username <input type="text"  class="form-control" id="floatingInput" placeholder="Username"></label></li>
-                    <li><label>Destination address: <input type="text" name="deliveryAddress"  class="form-control" id="floatingInput" placeholder="Address"/></label></li>
+                    <li><label>Indirizzo destinazione: <input type="text" name="deliveryAddress"  class="form-control" id="floatingInput" placeholder="Address"/></label></li>
                     <li class="creditcard">
-                    <label > Credit card info
+                    <label > Informazioni carta di credito:
                     <div class="input-group">
                      <input type="text" name="cardInfo"  class="form-control" id="floatingInput" placeholder="XXXX-XXXX-XXXX-XXXX" style="width: 60%;">
                      <input type="password" name="cvv" maxlength="3"  class="form-control" id="floatingInput" placeholder="CVV">
