@@ -22,7 +22,7 @@
         </div>
       </div>
      </section>
-     <section  name="paynow" class="my-20 p-4">
+     <section  name="paynow" class="p-4">
       <div class="d-flex justify-content-center">
         <button type="button" class="btn0 btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <a name="gotopay">Vai al Pagamento</a>
@@ -57,3 +57,14 @@
       </div>
     </div>
     </section>
+    <footer>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+        <a href="" class="navbar-brand ">Pagina del negozio</a>
+        
+            <div class="col-md-3 offset-md-4">
+            <h6 class="my-auto" > contatti:email@xyz.aa email2@sdf.aa</h6>
+            </div>   
+        </div>
+    </nav>
+</footer>

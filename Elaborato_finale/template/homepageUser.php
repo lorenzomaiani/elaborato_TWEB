@@ -47,8 +47,8 @@
 
 <footer>
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-        <a href="" class="navbar-brand ">Pagina del negozio</a>
-        <div class="container">
+    <div class="container">
+        <a href="" class="navbar-brand ">Pagina del negozio</a>     
             <div class="col-md-3 offset-md-4">
             <h6 class="my-auto" > contatti:email@xyz.aa email2@sdf.aa</h6>
             </div>   

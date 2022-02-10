@@ -68,6 +68,7 @@ body{
     background: url(../img/immagine_sfondo_2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 .main{
     background: url(../img/yveltal.jpg);
@@ -123,7 +124,7 @@ input[type=submit], input[type=reset]{
     margin: 10px 0px 10px 0px;
     
 }
-section[name=checkoutbtn]{
+section[name=checkoutbtn],section[name=paynow]{
     margin-top:20px;
     margin-bottom: 20px;
 }
@@ -143,16 +144,17 @@ section[name=checkoutbtn]{
     }
 
     body{
-        background-image: none;
+        background-image: url(../img/sfondo-Scorbunny.jpg);
         background-color: rgb(158, 158, 158);
+        background-size: cover;
+        background-repeat: repeat;
+       
     }
 
     body > footer, body > main > footer{
         display:none;
     }
 
-    section[name=mainSection]{
-        background-color: white;
-    }
+
 
 }
