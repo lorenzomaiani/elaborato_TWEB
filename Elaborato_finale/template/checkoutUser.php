@@ -50,7 +50,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <a href="checkOut.php?action=1" role="button" class="btn btn-info" style= "width: 60%; " name="buy">Completa il pagamento!</a>
+              <a href="notifiche.php?action=1" role="button" class="btn btn-info" style= "width: 60%; " name="buy">Completa il pagamento!</a>
             </div>
           </div>
         </div>
