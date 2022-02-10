@@ -23,7 +23,7 @@
 
     <?php if(isset($params["navHomepageUser"])):?>  <!--header mostrato nel caso di user-->
       <div class="col-md-3 offset-md-2">
-              <form class ="d-flex ms-lg-5" style="width: 100%;" action="search.php" methods="GET">
+              <form class ="d-flex ms-lg-5" name="searchbar" action="search.php" methods="GET">
                   <input class="px-2 search" type="search" name="searchBox" placeholder="Cerca" aria-label="Cerca"/>
                   <button class="btn0" type="submit">Cerca</button>
               </form>
@@ -58,7 +58,7 @@
 
     <?php if(isset($params["navHomepageAdmin"])):?> <!--Header mostrato in caso di Admin-->
       <div class="col-md-3 offset-md-2">
-          <form class ="d-flex ms-lg-5" style="width: 100%;" action="search.php" methods="GET">
+          <form class ="d-flex ms-lg-5" name="searchbar" action="search.php" methods="GET">
             <input class="px-2 search" type="search" name="searchBox" placeholder="Cerca" aria-label="Cerca"/>
             <button class="btn0" type="submit">Cerca</button>
           </form>
@@ -68,7 +68,7 @@
                   <ul class="navbar-nav ms-auto">
                       <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
                       <li class="nav-item"><a href="productManager.php?action=1" class="nav-link">Aggiungi item</a></li>
-                     <li> <div class="dropdown mb-2 mb-sm-0" style="width: 100%;">
+                     <li> <div class="dropdown mb-2 mb-sm-0">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="bi-bell"></i> <span class="badge"><?php echo $params["numNotifiche"]?></span>
           </button>

@@ -6,7 +6,7 @@
 
         <?php if(count($params["prodotti"]) == 0):?>
         <div class="row align-items-center">
-                <h3 class="text-center" style=" font-size: 5rem ;">Il tuo carrello è vuoto!</h3>
+                <h3 class="text-center" >Il tuo carrello è vuoto!</h3>
         </div>
         <?php endif;?>
 
@@ -20,7 +20,7 @@
                         <p class="card-text"><?php echo $prodotti["descrizioneprodotto"]?></p>
                         <h4><?php echo $prodotti["prezzoprodotto"]?>€</h4>
                         <p>Quantità scelta: <?php echo $prodotti["quantitàprodotto"]?></p>
-                        <a href="shop.php?action=3&username=<?php echo $_SESSION["username"]?>&nomeprodotto=<?php echo $prodotti["nomeprodotto"]?>" role="button" class="btn btn-info bg-danger" style= "width: 100%; ">Rimuovi prodotto dal carrello <i class="bi-cart-x"></i></a>
+                        <a href="shop.php?action=3&username=<?php echo $_SESSION["username"]?>&nomeprodotto=<?php echo $prodotti["nomeprodotto"]?>" role="button" class="btn btn-info bg-danger" name="removebtn">Rimuovi prodotto dal carrello <i class="bi-cart-x"></i></a>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
         <a href="" class="navbar-brand ">Pagina del negozio</a>
         <div class="container">
             <div class="col-md-3 offset-md-4">
-            <h6 class="my-auto" style="color:white;"> contatti:email@xyz.aa email2@sdf.aa</h6>
+            <h6 class="my-auto" > contatti:email@xyz.aa email2@sdf.aa</h6>
             </div>   
         </div>
     </nav>

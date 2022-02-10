@@ -32,7 +32,7 @@
                                 <input type="hidden" name="nomeprodotto" value="<?php echo $prodotti["nomeprodotto"]?>"/>
                             </form>
                         <?php endif;?>
-                        <a href="productManager.php?action=2&nomeprodotto=<?php echo $prodotti["nomeprodotto"]?>" role="button" class="btn btn-danger " style= "width: 100%; "> Rimuovi dal negozio <i class="bi-x-circle-fill"></i></a>
+                        <a href="productManager.php?action=2&nomeprodotto=<?php echo $prodotti["nomeprodotto"]?>" role="button" class="btn btn-danger " name="removebtn"> Rimuovi dal negozio <i class="bi-x-circle-fill"></i></a>
                     </div>
                 </div>
             </div>

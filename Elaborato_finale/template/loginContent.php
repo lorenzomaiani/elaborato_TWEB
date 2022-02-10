@@ -59,7 +59,7 @@
     <a href="" class="navbar-brand ">Pagina del negozio</a>
     <div class="container">
       <div class="col-md-3 offset-md-4">
-        <h6 class="my-auto" style="color:white;"> contatti:email@xyz.aa email2@sdf.aa</h6>
+        <h6 class="my-auto" > contatti:email@xyz.aa email2@sdf.aa</h6>
       </div>   
     </div>
   </nav>

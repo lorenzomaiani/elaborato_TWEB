@@ -26,7 +26,7 @@
                             <?php endif;?>
                             <form action="shop.php" method="POST">
                                 <label>Inserire la quantità: <input type="number" name="quantitàprodottoutente" min="1" max="<?php echo $prodotti["quantitàprodotto"]?>" required/></label>
-                                <input type="submit" value="Aggiungi al carrello" role="button" class="btn btn-info" style= "width: 100%; "/>
+                                <input type="submit" value="Aggiungi al carrello" role="button" class="btn btn-info" name="removebtn"/>
                                 <input type="hidden" name="action" value="1"/>
                                 <input type="hidden" name="username" value="<?php echo $_SESSION["username"]?>"/>
                                 <input type="hidden" name="nomeprodotto" value="<?php echo $prodotti["nomeprodotto"]?>"/>
@@ -50,7 +50,7 @@
         <a href="" class="navbar-brand ">Pagina del negozio</a>
         <div class="container">
             <div class="col-md-3 offset-md-4">
-            <h6 class="my-auto" style="color:white;"> contatti:email@xyz.aa email2@sdf.aa</h6>
+            <h6 class="my-auto" > contatti:email@xyz.aa email2@sdf.aa</h6>
             </div>   
         </div>
     </nav>

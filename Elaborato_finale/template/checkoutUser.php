@@ -42,7 +42,7 @@
                     <li class="creditcard">
                     <label > Informazioni carta di credito:
                     <div class="input-group">
-                     <input type="text" name="cardInfo"  class="form-control" id="floatingInput" placeholder="XXXX-XXXX-XXXX-XXXX" style="width: 60%;"/>
+                     <input type="text" name="cardInfo"  class="form-control" id="floatingInput" placeholder="XXXX-XXXX-XXXX-XXXX" name="cardinfo"/>
                      <input type="password" name="cvv" maxlength="3"  class="form-control" id="floatingInput" placeholder="CVV"/>
                     </div></label></li>
                 </ul> 
@@ -50,7 +50,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <a href="notifiche.php?action=1" role="button" class="btn btn-info" style= "width: 60%; " name="buy">Completa il pagamento!</a>
+              <a href="notifiche.php?action=1" role="button" class="btn btn-info"  name="buy">Completa il pagamento!</a>
             </div>
           </div>
         </div>
