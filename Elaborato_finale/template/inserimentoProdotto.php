@@ -9,7 +9,7 @@
                     <li>
                         <div class="mb-3">
                             <label for="nomeprodotto" class="form-label">Nome Prodotto</label>
-                            <input type="text" name="nomeprodotto" class="form-control" id="nomeprodotto" placeholder=""/>
+                            <input type="text" name="nomeprodotto" class="form-control" id="nomeprodotto" placeholder="" required/>
                           </div>
                     </li>
                     <li>
@@ -21,7 +21,7 @@
                     <li>
                         <div class="mb-3">
                             <label for="productimage" class="form-label">Immagine Prodotto</label>
-                            <input type="file" name="immagineprodotto" class="form-control" id="immagineprodotto" placeholder=""/>
+                            <input type="file" name="immagineprodotto" class="form-control" id="immagineprodotto" placeholder="" required/>
                           </div>
                        
                      </li>
@@ -34,7 +34,7 @@
                      <li>
                         <div class="mb-3">
                             <label for="productquantity" class="form-label">Quantità</label>
-                            <input type="number" name="quantitàprodotto" min="0" max="25" step="1" class="form-control" id="quantitàprodotto"/>
+                            <input type="number" name="quantitàprodotto" min="0" max="25" step="1" class="form-control" id="quantitàprodotto" required/>
                           </div>
                      </li>
                 </ul>

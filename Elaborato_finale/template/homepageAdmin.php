@@ -14,7 +14,7 @@
         <?php foreach($params["prodotti"] as $prodotti):?>
             <div class="col-6 col-lg-3 ">
                 <div class="card">
-                    <img src="img/<?php echo $prodotti["immagineprodotto"];?>" class="card-img-top" alt="...">
+                    <img src="img/<?php echo $prodotti["immagineprodotto"];?>" class="card-img-top" alt="Immagine del prodotto"/>
                     <div class="card-body shadow">
                         <h5 class="card-title"><?php echo $prodotti["nomeprodotto"];?></h5>
 

@@ -7,7 +7,7 @@
     $username = "root";
     $password = "";
     $dbname = "sitoweb";
-    $port = "3306";
+    $port = "8080";
 
     $db = new DataBase($servername, $username, $password, $dbname, $port);
     

@@ -34,13 +34,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/immagine_sfondo_1.jpg" class=" img-fluid" alt="">
+        <img src="img/immagine_sfondo_1.jpg" class=" img-fluid" alt=""/>
       </div>
       <div class="carousel-item">
-        <img src="img/yveltal.jpg" class="img-fluid"  alt="">
+        <img src="img/yveltal.jpg" class="img-fluid"  alt=""/>
       </div>
       <div class="carousel-item">
-        <img src="img/immagine_sfondo_3.jpg" class=" img-fluid" alt="">
+        <img src="img/immagine_sfondo_3.jpg" class=" img-fluid" alt=""/>
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
