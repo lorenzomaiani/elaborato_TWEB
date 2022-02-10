@@ -22,10 +22,19 @@
         </div>
          </div>
      </section>
-    <section  name="paynow"style="margin-top:20px;">
-        <div class="container bg-light bg-gradient p-2">
-        <div class="col-md-3 offset-md-5" >
-            <h2>Paga adesso:</h2>
+     <section  name="paynow" class="my-20 p-4">
+      <div class="d-flex justify-content-center">
+      <button type="button" class="btn0 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+       <h3>Vai al Pagamento</h3>
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Pagamento</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
             <form action="#" method="POST">
                 <ul>
                     <li><label>Username <input type="text"  class="form-control" id="floatingInput" placeholder="Username"></label></li>
@@ -38,7 +47,13 @@
                     </div></label></li>
                 </ul> 
             </form>
-            <a href="notifiche.php?action=1" role="button" class="btn btn-info" style= "width: 100%; " name="buy">Completa l'ordine</a>
-       </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <a href="checkOut.php?action=1" role="button" class="btn btn-info" style= "width: 60%; " name="buy">Completa il pagamento!</a>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
     </section>
