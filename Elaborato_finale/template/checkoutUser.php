@@ -24,8 +24,8 @@
      </section>
      <section  name="paynow" class="my-20 p-4">
       <div class="d-flex justify-content-center">
-      <button type="button" class="btn0 " data-bs-toggle="modal" data-bs-target="#exampleModal">
-       <h3>Vai al Pagamento</h3>
+      <button type="button" class="btn0 btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+       <a name="gotopay">Vai al Pagamento</a>
       </button>
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

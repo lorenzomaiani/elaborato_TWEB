@@ -33,7 +33,7 @@ h2{
     font-size: 4rem;
 }
 
-a[name=chkt]{
+a[name=chkt],h3[name=gotopay]{
     color:black;
     text-decoration: none;
     font-weight: bolder;
