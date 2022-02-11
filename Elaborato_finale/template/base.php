@@ -40,9 +40,9 @@
                 <?php if($params["numNotifiche"] > 0):?>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <?php foreach($params["notifiche"] as $notifiche):?>
-                  <li><a class="dropdown-item" href="#"><?php echo $notifiche["testonotifica"]?></a></li>
+                  <li><a class="dropdown-item bg-primary text-light border border-dark" href="#"><?php echo $notifiche["testonotifica"]?></a></li>
                   <?php endforeach; ?>
-                  <li><a class="dropdown-item" href="notifiche.php?action=2">Segna tutto come già letto<i class="bi-x"></i></a></li>
+                  <li><a class="dropdown-item  border border-dark " href="notifiche.php?action=2">Segna tutto come già letto<i class="bi-x"></i></a></li>
                 </ul>
                 <?php endif; ?>
               </div></li>
@@ -75,15 +75,13 @@
           <?php if($params["numNotifiche"] > 0):?>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <?php foreach($params["notifiche"] as $notifiche): ?>
-              <li><a class="dropdown-item" href="#"><?php echo $notifiche["testonotifica"]?></a></li>
+              <li><a class="dropdown-item bg-primary text-light border border-dark" href="#"><?php echo $notifiche["testonotifica"]?></a></li>
             <?php endforeach;?>
-            <li><a class="dropdown-item" href="notifiche.php?action=2">Segna tutto come già letto <i class="bi-x"></i></a></li>
+            <li><a class="dropdown-item border border-dark" href="notifiche.php?action=2">Segna tutto come già letto <i class="bi-x"></i></a></li>
           </ul>
           <?php endif; ?>
         </div></li>
                   </ul>
-              
-              
                     </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
               <span class="navbar-toggler-icon"></span>

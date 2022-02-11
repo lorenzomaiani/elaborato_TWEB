@@ -150,10 +150,14 @@ section[name=checkoutbtn],section[name=paynow]{
         background-repeat: repeat;
        
     }
-
-    body > footer, body > main > footer{
+.footerfastidioso{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+}
+    /*body > footer, body > main > footer{
         display:none;
-    }
+    }*/
 
 
 

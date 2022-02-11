@@ -25,7 +25,7 @@
 
     if($_GET["action"] == 3){ // rimuovi dal carrello
         $db->removeProductToCart($_GET["username"], $_GET["nomeprodotto"]);
-        header("Location:index.php");
+        header("Location:shop.php?action=2");
     }
 
     if($_GET["action"] == "shop"){

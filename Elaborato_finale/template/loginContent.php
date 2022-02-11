@@ -54,7 +54,7 @@
   </div>
 </div>
 
-<footer>
+<footer class="footerfastidioso">
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
   <div class="container">
     <a href="" class="navbar-brand ">Pagina del negozio</a>
